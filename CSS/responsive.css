@@ -1,0 +1,62 @@
+
+/* desktop verisa ucun css kodlari */
+
+@media (min-width: 1023px){
+     
+}
+/* tablet üçün responsiv kodları */
+
+@media (max-width: 1023px){
+     header .container nav ul.left-ul{
+         display: none;
+     }
+     header .container nav{
+          justify-content: space-between;
+     }
+     header .container nav .right-ul{
+          scale: 0.9;
+     }
+     header .container .logo{
+          scale: 0.9;
+         
+     }
+     header .container nav button#burger{
+          display: block;
+     }
+}
+
+/* Telefon üçün responsiv kodları */
+@media (max-width: 667px){
+     header .container nav ul.right-ul{
+          li.announcement,li.login{
+               display: none;
+          }
+     }
+     header .container {
+          justify-content: space-between;
+          gap: 0px;
+          position: relative;
+     }
+    
+     
+     header .container  nav {
+          flex-direction: row-reverse;
+          width: 50%;
+          margin: 0px;
+         
+     }
+     header .container .logo{
+          scale: 0.9;
+          min-width: 40%;
+          img{
+               width: 60%;
+          }
+     }
+     header .container nav .right-ul{
+          transform: translateX(-50%);
+          select{
+               scale: 0.8;
+          }
+     }
+     
+}
