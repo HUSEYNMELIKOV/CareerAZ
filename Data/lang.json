@@ -1,0 +1,160 @@
+{
+     "en": {
+          "header": {
+               "searchInput": "What service are you looking for today?",
+               "dropdownPro": {
+                    "dropText": "Pro",
+                    "dropHeader": "Hire vetted freelance talent at Pro",
+                    "links": [
+                         {
+                              "li": {
+                                   "h3": "Satisfaction guarantee",
+                                   "p": "Money-back guarantee when working with experienced freelancers."
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Pro Business Rewards program",
+                                   "p": "Every Career Pro order brings you closer to exclusive benefits."
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Resource services",
+                                   "p": "Fiverr Pro experts will vet and interview freelance talent for you."
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Cooperation and payments",
+                                   "p": "Collaborate with your team, manage budgets, and hire flexibly."
+                              }
+                         }
+                    ]
+               },
+               "dropdownExplore": {
+                    "dropText": "Explore",
+                    "links": [
+                         {
+                              "li": {
+                                   "h3": "Answers",
+                                   "p": "Powered by AI, answered by CareerAz freelancers."
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Community",
+                                   "p": "Connect with CareerAz's team and community."
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Guides",
+                                   "p": "In-depth guides covering business topics"
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Podcast",
+                                   "p": "inside tips from top bussines minds."
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Learn",
+                                   "p": "Professional online courses, led by experts."
+                              }
+                         },
+                         {
+                              "li": {
+                                   "h3": "Blog",
+                                   "p": "News, information and community stories."
+                              }
+                         }
+                    ]
+               },
+               "become_a_seller": "Become a seller",
+               "signIn": "Sign in",
+               "join": "Join"
+          }
+     },
+     "az": {
+          "header": {
+               "searchInput": "Bu gün hansı xidməti axtarırsınız?",
+               "dropdownPro": {
+                 "dropText": "Pro",
+                 "dropHeader": "Yoxlanılmış frilanser istedadlarını Pro ilə işə götürün",
+                 "links": [
+                   {
+                     "li": {
+                       "h3": "Məmnuniyyət zəmanəti",
+                       "p": "Təcrübəli frilanserlərlə işləyərkən pul geri qaytarma zəmanəti."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "Pro Biznes Mükafat proqramı",
+                       "p": "Hər Career Pro sifarişi sizi eksklüziv üstünlüklərə daha da yaxınlaşdırır."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "Resurs xidmətləri",
+                       "p": "Fiverr Pro mütəxəssisləri sizin üçün frilanser istedadlarını yoxlayacaq və müsahibə edəcək."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "Əməkdaşlıq və ödənişlər",
+                       "p": "Komandanızla əməkdaşlıq edin, büdcələri idarə edin və çevik şəkildə işə götürün."
+                     }
+                   }
+                 ]
+               },
+               "dropdownExplore": {
+                 "dropText": "Kəşf et",
+                 "links": [
+                   {
+                     "li": {
+                       "h3": "Cavablar",
+                       "p": "Süni intellekt tərəfindən dəstəklənir, CareerAz frilanserləri tərəfindən cavablandırılır."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "İcma",
+                       "p": "CareerAz komanda və icması ilə əlaqə qurun."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "Bələdçilər",
+                       "p": "Biznes mövzularını əhatə edən ətraflı bələdçilər."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "Podkast",
+                       "p": "Ən yaxşı biznes mütəxəssislərindən daxili məsləhətlər."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "Öyrən",
+                       "p": "Mütəxəssislərin rəhbərliyi ilə peşəkar onlayn kurslar."
+                     }
+                   },
+                   {
+                     "li": {
+                       "h3": "Bloq",
+                       "p": "Xəbərlər, məlumatlar və icma hekayələri."
+                     }
+                   }
+                 ]
+               },
+               "become_a_seller": "Satıcı ol",
+               "signIn": "Daxil ol",
+               "join": "Qoşul"
+             }             
+     }
+}

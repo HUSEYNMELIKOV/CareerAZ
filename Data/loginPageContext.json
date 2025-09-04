@@ -1,0 +1,20 @@
+[
+     {
+          "type": "login",
+          "text": {
+               "h2": "Sign in to your account",
+               "p": "Don’t have an account?",
+               "span": "Join here",
+               "withButtonEmail": "Continue with email/username"
+          }
+     },
+     {
+          "type": "register",
+          "text": {
+               "h2": "Create a new account",
+               "p": "Already have an account?",
+               "span": "Sign in",
+               "withButtonEmail": "Continue with email"
+          }
+     }
+]

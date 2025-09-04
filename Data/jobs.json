@@ -1,0 +1,68 @@
+[
+     {
+          "jobsCategories": {
+               "categories": [
+                    {
+                         "id": 1,
+                         "name": "Graphics & Design"
+                    },
+                    {
+                         "id": 2,
+                         "name": "Digital Marketing"
+                    },
+                    {
+                         "id": 3,
+                         "name": "Writing & Translation"
+                    },
+                    {
+                         "id": 4,
+                         "name": "Video & Animation"
+                    },
+                    {
+                         "id": 5,
+                         "name": "Music & Audio"
+                    },
+                    {
+                         "id": 6,
+                         "name": "Programming & Tech"
+                    },
+                    {
+                         "id": 7,
+                         "name": "AI Services"
+                    },
+                    {
+                         "id": 8,
+                         "name": "Consulting"
+                    },
+                    {
+                         "id": 9,
+                         "name": "Data"
+                    },
+                    {
+                         "id": 10,
+                         "name": "Business"
+                    },
+                    {
+                         "id": 11,
+                         "name": "Personal Growth"
+                    },
+                    {
+                         "id": 12,
+                         "name": "Photography"
+                    },
+                    {
+                         "id": 13,
+                         "name": "Finance"
+                    },
+                    {
+                         "id": 14,
+                         "name": "End-to-End Projects"
+                    },
+                    {
+                         "id": 15,
+                         "name": "Service Catalog"
+                    }
+               ]
+          }
+     }
+]

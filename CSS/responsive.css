@@ -1,0 +1,149 @@
+/* header */
+@media (max-width: 1150px) {
+     
+     #change_lang {
+          display: none;
+     }
+
+     header .top-container .burgerBtn {
+          display: inline-block;
+     }
+
+     header .top-container nav {
+          padding-left: 6px;
+
+          li {
+
+               button:not(.dropdown-content button),
+               a:not(.dropdown-content a) {
+                    padding: 6px 14px;
+                    font-size: 14px;
+               }
+          }
+     }
+}
+
+@media (max-width: 1024px) {
+     header .top-container nav li.dr {
+          display: none;
+     }
+
+     header .top-container nav li.seller {
+          display: none;
+     }
+
+     header .top-container .input-search {
+          margin-left: 12px;
+
+          .search-btn-box {
+               display: none;
+          }
+
+          #clear_input_value {
+               display: none;
+          }
+
+          #search_input {
+               border-right: 1px solid var(--mqvym51i);
+               border-radius: 4px;
+               font-size: 12px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               width: 100%;
+          }
+     }
+
+     header .top-container .logo-box-1 {
+          width: 110px;
+
+          img {
+               width: 100px;
+          }
+     }
+     header .top-container {
+          padding: 0px 16px;
+     }
+     body .layout .loginPage-overlay .loginPage {
+          width: 450px ;
+     }
+
+     .loginPage .left-side {
+          display: none;
+     }
+
+     .loginPage .right-side {
+          width: 100% !important;
+     }
+
+     .loginPage .backParent .closeLogin {
+          i {
+               font-size: 14px !important;
+          }
+
+          span {
+               display: none;
+          }
+
+     }
+     .loginPage .backParent {
+          .logo-box img {
+               display: block !important;
+          }
+          .close-btn{
+               display: inline-block !important;
+               
+          }
+          .closeLogin{
+               padding-right: 14px !important;
+          }
+     }
+     
+
+}
+
+@media (max-width: 570px) {
+     header .top-container .input-search {
+          display: none;
+     }
+
+     header .top-container {
+          justify-content: space-between;
+     }
+
+     header .top-container .logo-box-1 {
+          justify-content: center;
+          width: 200px;
+
+          img {
+               width: 160px;
+          }
+     }
+
+     header .top-container .burgerBtn {
+          scale: 1.1;
+     }
+
+     header .top-container nav {
+          flex-grow: 0 !important;
+     }
+
+     header .top-container nav .nav_li {
+          button.loginBtn {
+               display: none !important;
+          }
+     }
+     .loginPage{
+          width: 100%  !important;
+          height: 100% !important;
+          max-height: 100% !important;
+          border-radius: 0px !important;
+
+     }
+     .loginPage .right-side{
+          width: 100% !important ;
+     }
+     .switchLang-overlay .container {
+          max-width: 100% !important;
+          max-height: 100% !important;
+     }
+}

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/CSS/header.css">
+     <link rel="stylesheet" href="/CSS/root.css">
+     <link rel="stylesheet" href="/CSS/responsive.css">
+     <link rel="stylesheet" href="/CSS/loginPage.css">
+     <link rel="stylesheet" href="/CSS/global.css">
+     <link rel="stylesheet" href="/CSS/switchLang.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <title>CareerAz</title>
+</head>
+
+<body>
+     <div class="layout">
+          <div class="loader-container">
+              <div class="loader"></div> 
+              <script>document.querySelector(".loader-container").classList.add("open")</script>
+          </div>
+          
+          <div class="loginPage-overlay">
+               <div class="loginPage">
+                    <div class="left-side">
+                         <div class="img-parent">
+                              <img src="/assets/images/loginPage-bg-img.png" width="100%" alt="pageBg.png">
+                         </div>
+                         <div class="login-description">
+                              <h2>Success starts here</h2>
+                              <ul class="Lpage-list">
+                                   <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        <p>Over 700 categories</p>
+                                   </li>
+                                   <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        <p>Quality work done faster</p>
+                                   </li>
+                                   <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        <p>Access to talent and businesses across the globe</p>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="right-side v1 open">
+                         <div class="backParent">
+                              <div class="logo-box">
+                                   <img src="/assets/svg/logo.svg">
+                              </div>
+                              <div class="close-btn">
+                                   <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                   </button>
+                              </div>
+                         </div>
+                         <div class="right-header">
+                              <h2>Test header</h2>
+                              <p>test param <span>Sign in</span></p>
+                         </div>
+                         <div class="with-x-page">
+                              <button class="with-google with">
+                                   <img src="/assets/svg/google-logo.svg">
+                                   <p>Continue with Google</p>
+                              </button>
+                              <button class="with-Email with">
+                                   <img src="/assets/svg/eMail-logo.svg">
+                                   <p>Continue with Email</p>
+                              </button>
+                              <div class="or-line">
+                                   <span></span>
+                                   <p>OR</p>
+                                   <span></span>
+                              </div>
+                              <div class="apple-facebook">
+                                   <button class="with">
+                                        <img src="/assets/svg/apple-logo.svg">
+                                        <p>Apple</p>
+                                   </button>
+                                   <button class="with">
+                                        <img src="/assets/svg/facebook-logo.svg">
+                                        <p>Facebook</p>
+                                   </button>
+                              </div>
+                         </div>
+                         <div class="right-footer">
+                              <p>
+                                   By joining, you agree to the Fiverr <a href="#">Terms of Servic</a>e and to
+                                   occasionally receive emails from us. Please read our <a href="#">Privacy Policy</a>
+                                   to learn how we use your personal data.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="right-side v2">
+                         <div class="backParent">
+                              <button class="closeLogin">
+                                   <i class="fa-solid fa-arrow-left"></i>
+                                   <span>Back</span>
+                              </button>
+                              <div class="logo-box">
+                                   <img src="/assets/svg/logo.svg">
+                              </div>
+                              <div class="close-btn">
+                                   <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                   </button>
+                              </div>
+                         </div>
+                         <div class="right-header">
+                              <h2>Continue with your email or username</h2>
+                         </div>
+                         <form action="/login" method="post" style="height: 100%;">
+                              <div class="inputs">
+                                   <div class="Email-or-Username lpInp">
+                                        <div class="label-text">
+                                             <label for="lp-email">Email or username</label>
+                                        </div>
+                                        <div class="input">
+                                             <input type="email" name="email" id="lp-email">
+                                             <div class="status"></div>
+                                        </div>
+                                   </div>
+                                   <div class="password lpInp">
+                                        <div class="label-text">
+                                             <label for="lp-password">Password</label>
+                                        </div>
+                                        <div class="input">
+                                             <input type="password" name="password" id="lp-password">
+                                             <div class="status">
+                                                  <button onclick="changeType(this)" type="button">
+                                                       <i class="fa-solid fa-eye-slash"></i>
+                                                  </button>
+                                             </div>
+                                        </div>
+                                        <div class="forgot-parent">
+                                             <a href="#" class="forgot-psw">Forgot password?</a>
+                                        </div>
+                                   </div>
+
+                              </div>
+                              <div class="submit-form">
+                                   <button class="submit __dark-btn-b1">Sign in</button>
+                              </div>
+                         </form>
+
+                         <div class="right-footer">
+                              <p>
+                                   By joining, you agree to the Fiverr <a href="#">Terms of Servic</a>e and to
+                                   occasionally receive emails from us. Please read our <a href="#">Privacy Policy</a>
+                                   to learn how we use your personal data.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="right-side v3">
+                         <div class="backParent">
+                              <button class="closeLogin">
+                                   <i class="fa-solid fa-arrow-left"></i>
+                                   <span>Back</span>
+                              </button>
+                              <div class="logo-box">
+                                   <img src="/assets/svg/logo.svg">
+                              </div>
+                              <div class="close-btn">
+                                   <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                   </button>
+                              </div>
+                         </div>
+                         <div class="right-header">
+                              <h2>Continue with your email</h2>
+                         </div>
+                         <form action="/register" method="post" style="height: 100%;">
+                              <div class="inputs">
+                                   <div class="Username lpInp">
+                                        <div class="label-text">
+                                             <label for="rp-name">Create Name</label>
+                                        </div>
+                                        <div class="input">
+                                             <input type="text" name="username" id="rp-name">
+                                             <div class="status"></div>
+                                        </div>
+                                   </div>
+                                   <div class="Email-or-Username lpInp">
+                                        <div class="label-text">
+                                             <label for="rp-email">Email</label>
+                                        </div>
+                                        <div class="input">
+                                             <input type="email" name="email" id="rp-email">
+                                             <div class="status"></div>
+                                        </div>
+                                   </div>
+                                   <div class="password lpInp">
+                                        <div class="label-text">
+                                             <label for="rp-password">Password</label>
+                                        </div>
+                                        <div class="input">
+                                             <input type="password" name="password" class="rp-password"
+                                                  id="rp-password">
+                                             <div class="status">
+                                                  <button onclick="changeTypeReg(this)" type="button">
+                                                       <i class="fa-solid fa-eye-slash"></i>
+                                                  </button>
+                                             </div>
+                                        </div>
+                                        <div class="parol-status">
+                                             <ul>
+                                                  <li><i class="fa-regular fa-circle-check"></i>
+                                                       <p>At least 8 characters</p>
+                                                  </li>
+                                                  <li><i class="fa-regular fa-circle-check"></i>
+                                                       <p>At least 1 uppercase letter</p>
+                                                  </li>
+                                                  <li><i class="fa-regular fa-circle-check"></i>
+                                                       <p>At least 1 lowercase letter</p>
+                                                  </li>
+                                                  <li><i class="fa-regular fa-circle-check"></i>
+                                                       <p>At least 1 number</p>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="submit-form">
+                                   <button class="submit __dark-btn-b1">Continue</button>
+                              </div>
+                         </form>
+
+                         <div class="right-footer">
+                              <p>
+                                   By joining, you agree to the Fiverr <a href="#">Terms of Servic</a>e and to
+                                   occasionally receive emails from us. Please read our <a href="#">Privacy Policy</a>
+                                   to learn how we use your personal data.
+                              </p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="sidebar-overlay w-100">
+               <div class="sidebar flex" id="sidebar">
+                    <div class="sidebar-header w-100">
+                         <ul class="links">
+                              <li><a href="#" class="join">Join CareerAz</a></li>
+                         </ul>
+                    </div>
+                    <div class="sidebar-menu">
+                         <ul class="menu-selections">
+                              <li><a href="#" class="sign-in link w-100">Sign in</a></li>
+                              <li>
+                                   <button class="categories wrapper flex w-100">
+                                        <span>Browse categories</span><i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul></ul>
+                                   </div>
+                              </li>
+                              <li>
+                                   <button class="Explore wrapper flex w-100">
+                                        <span>Explore</span><i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul>
+                                             <button class="explore-selections listelement">
+                                                  <span>Answers</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </button>
+                                             <button class="explore-selections listelement">
+                                                  <span>Guides</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </button>
+                                             <button class="explore-selections listelement">
+                                                  <span>Learn</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </button>
+                                             <button class="explore-selections listelement">
+                                                  <span>Logo-maker</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </button>
+                                             <button class="explore-selections listelement">
+                                                  <span>Community</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </button>
+                                             <button class="explore-selections listelement">
+                                                  <span>podcast</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </button>
+                                             <button class="explore-selections listelement">
+                                                  <span>Blog</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </button>
+                                        </ul>
+                                   </div>
+                              </li>
+                              <li>
+                                   <button class="Pro wrapper flex w-100">
+                                        <span>Pro</span><i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul>
+                                             <li>
+                                                  <button class="pro-selections listelement">
+                                                       <span>I'am looking to hire</span>
+                                                  </button>
+                                             </li>
+                                             <li>
+                                                  <button class="pro-selections listelement">
+                                                       <span>I want to offer pro services</span>
+                                                  </button>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </li>
+                              <li><span class="subheader">General</span></li>
+                              <li><a href="#" class="home link">Home</a></li>
+                              <li>
+                                   <button class="change_lang wrapper flex w-100">
+                                        <span>EN <i class="fa solid fa-globe"></i></span>
+                                        <i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul>
+                                             <li>
+                                                  <button class="lang-selections listelement" value="az">
+                                                       <span>AZE</span>
+                                                       <i class="fa-solid fa-check"></i>
+                                                  </button>
+                                             </li>
+                                             <li>
+                                                  <button class="lang-selections listelement" value="en">
+                                                       <span>ENG</span>
+                                                       <i class="fa-solid fa-check"></i>
+                                                  </button>
+                                             </li> 
+                                        </ul>
+                                   </div>
+                              </li>
+                              <li>
+                                   <button class="change_currency wrapper flex w-100">
+                                        <span>USD <i class="fa solid fa-usd"></i></span>
+                                        <i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul>
+                                             <li>
+                                                  <button class="currency-selections listelement">
+                                                       <span>USD <i class="fa-solid fa-dollar"></i></span>
+                                                       <i class="fa-solid fa-check"></i>
+                                                  </button>
+                                             </li>
+                                             <li>
+                                                  <button class="currency-selections listelement">
+                                                       <span>AZE ₼</span>
+                                                  </button>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <div class="switchLang-overlay w-100">
+               <div class="container">
+                    <div class="header flex">
+                         <h1>Select your preferences</h1>
+                         <button class="close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="screen">
+
+                         <ul class="tab flex">
+                              <li><button class="lang st active">Language</button></li>
+                              <li><button class="currency st">Currency</button></li>
+                         </ul>
+                         <div class="overflow">
+                              <ul class="list-lang list open">
+                                   <li>
+                                        <button class="option-lang option" value="az">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="lang name">Azərbaycan</span>
+                                             </div>
+                                        </button>
+                                   </li>
+                                   <li>
+                                        <button class="option-lang option" value="en">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="lang name">English</span>
+                                             </div>
+                                        </button>                                   
+                                   </li>
+                              </ul>
+                              <ul class="list-currency list">
+                                   <li>
+                                        <button class="option-currency option">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="currency-name">United States Dollar</span>
+                                                  <span class="currency-symbol">USD $</span>
+                                             </div>
+                                        </button>
+                                   </li>
+                                   <li>
+                                        <button class="option-currency option">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="currency-name">Azərbaycan manatı</span>
+                                                  <span class="currency-symbol">AZN ₼</span>
+                                             </div>
+                                        </button>
+                                   </li>
+                              </ul>
+                         </div>
+
+                    </div>
+               </div>
+          </div>
+          <header class="flex w-100 column-flex">
+               <div class="top-container flex w-100">
+                    <div class="burger">
+                         <button class="burgerBtn" id="burgerBtn"><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                    <div class="logo-box-1 flex">
+                         <a href="/HTML/index.html" class="flex"><img src="/assets/svg/logo.svg"></a>
+                    </div>
+                    <div class="input-search flex ">
+                         <input type="text" placeholder="What service are you looking for today?" id="search_input"
+                              name="search_input" >
+                         <button id="clear_input_value"><i class="fa-solid fa-xmark flex flex-center"></i></button>
+                         <div class="search-btn-box">
+                              <button class="search __dark-btn-b1">
+                                   <i class="fa-solid fa-search"></i>
+                              </button>
+                         </div>
+                    </div>
+                    <nav class="flex">
+                         <li id="pro-dropdown" class="dr nav_li ">
+                              <button class="hovGray pro_btn" id="pro">Pro <i class="fa-solid fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-content flex pro column-flex">
+                                   <p class="window-p">Hire vetted freelance talent at Pro</p>
+                                   <li class="link">
+                                        <a href="#">
+                                             <div class="icon">
+                                                  <img src="/assets/icons/hd-icon-1.svg">
+                                             </div>
+                                             <div class="description">
+                                                  <h3>Satisfaction guarantee</h3>
+                                                  <p>Money-back guarantee when working with experienced freelancers.</p>
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <div class="icon">
+                                                  <img src="/assets/icons/hd-icon-2.svg">
+                                             </div>
+                                             <div class="description">
+                                                  <h3>Pro Business Rewards program</h3>
+                                                  <p>Every Career Pro order brings you closer to exclusive benefits.</p>
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <div class="icon">
+                                                  <img src="/assets/icons/hd-icon-3.svg">
+                                             </div>
+                                             <div class="description">
+                                                  <h3>Resource services</h3>
+                                                  <p>Fiverr Pro experts will vet and interview freelance talent for you
+                                                  </p>
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <div class="icon">
+                                                  <img src="/assets/icons/hd-icon-4.svg">
+                                             </div>
+                                             <div class="description">
+                                                  <h3>Cooperation and payments</h3>
+                                                  <p>Collaborate with your team, manage budgets, and hire flexibly.</p>
+                                             </div>
+                                        </a>
+                                   </li>
+                              </ul>
+                         </li>
+                         <li id="explore-dropdown" class="dr nav_li">
+                              <button class="hovGray explore_btn" id="explore">Explore <i
+                                        class="fa-solid fa-chevron-down"></i></button>
+                              <ul class="dropdown-content column-flex flex explore">
+                                   <li class="link">
+                                        <a href="#">
+                                             <h3>Cavablar</h3>
+                                             <p>AI tərəfindən dəstəklənir, Fiverr freelancerləri tərəfindən
+                                                  cavablandırılır</p>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <h3>İcma</h3>
+                                             <p>Career komandası və icması ilə əlaqə saxlayın</p>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <h3>Bələdçilər</h3>
+                                             <p>Biznes mövzularını əhatə edən dərin təlimatlar</p>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <h3>Podkast</h3>
+                                             <p>Ən yaxşı biznes ağıllarından daxili məsləhətlər</p>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <h3>Öyrən</h3>
+                                             <p>Mütəxəssislər tərəfindən idarə olunan peşəkar onlayn kurslar</p>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <h3>Bloq</h3>
+                                             <p>Xəbərlər, məlumat və icma hekayələri</p>
+                                        </a>
+                                   </li>
+                              </ul>
+                         </li>
+                         <li id="change_lang" class="nav_li ">
+                              <button class="hovGreen">AZ <i class="fa-solid fa-globe"></i></button>
+                         </li>
+                         <li class="seller nav_li flex "><a href="#" class="hovGreen">Become a seller</a></li>
+                         <li class="nav_li "><button class="loginBtn hovGreen">Sign in</button></li>
+                         <li class="nav_li "><button class="registerBtn hovGreen">Join</button></li>
+                    </nav>
+               </div>
+          </header>
+
+     </div>
+     <script src="/JavaScript/utils.js"></script>
+     <script src="/JavaScript/header.js"></script>
+     <script src="/JavaScript/loginPageRequest.js"></script>
+     <script src="/JavaScript/dataRequestHeader.js"></script>
+     <script src="/JavaScript/loginCheck.js"></script>
+     <script src="/JavaScript/switchLang.js"></script>
+</body>
+
+</html>

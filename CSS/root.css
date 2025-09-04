@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    overflow-y: hidden;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+}
+
+.layout {
+    width: 100%;
+    min-height: 400vh;
+}
+
+.darkEffect {
+    display: none;
+}
+
+.darkEffect.toggle {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.349);
+    position: fixed;
+    z-index: 99;
+}
+
+:root {
+    --mqvym50: transparent;
+    --mqvym51: inherit;
+    --mqvym52: currentColor;
+    --mqvym53: rgb(12, 12, 13);
+    --mqvym54: rgba(98, 100, 106, .2);
+    --mqvym55: rgba(98, 100, 106, .25);
+    --mqvym56: rgba(98, 100, 106, .4);
+    --mqvym57: #fff;
+    --mqvym58: hsla(0, 0%, 100%, .1);
+    --mqvym59: hsla(0, 0%, 100%, .2);
+    --mqvym5a: hsla(0, 0%, 100%, .5);
+    --mqvym5b: hsla(0, 0%, 100%, .8);
+    --mqvym5c: hsla(0, 0%, 100%, .9);
+    --mqvym5d: #f0f4ff;
+    --mqvym5e: #d4defb;
+    --mqvym5f: #b9c9f7;
+    --mqvym5g: #9db4f3;
+    --mqvym5h: #819ef0;
+    --mqvym5i: #6689ec;
+    --mqvym5j: #446ee7;
+    --mqvym5k: #3f63c8;
+    --mqvym5l: #3453a8;
+    --mqvym5m: #284389;
+    --mqvym5n: #1d3369;
+    --mqvym5o: #122349;
+    --mqvym5p: #f2f5ff;
+    --mqvym5q: #e6ebff;
+    --mqvym5r: #dcdfff;
+    --mqvym5s: #d2d3ff;
+    --mqvym5t: #bbb9ff;
+    --mqvym5u: #a6a1ff;
+    --mqvym5v: #8e88ff;
+    --mqvym5w: #6460e6;
+    --mqvym5x: #504dbf;
+    --mqvym5y: #3c3a99;
+    --mqvym5z: #282773;
+    --mqvym510: #18184d;
+    --mqvym511: #e8faf4;
+    --mqvym512: #d0f7e6;
+    --mqvym513: #a6eaca;
+    --mqvym514: #84dfb5;
+    --mqvym515: #62d49f;
+    --mqvym516: #3fca89;
+    --mqvym517: #1dbf73;
+    --mqvym518: #00aa5a;
+    --mqvym519: #008a37;
+    --mqvym51a: #00732e;
+    --mqvym51b: #005c25;
+    --mqvym51c: #172c1e;
+    --mqvym51d: #fafafa;
+    --mqvym51e: #f5f5f5;
+    --mqvym51f: #efeff0;
+    --mqvym51g: #e4e5e7;
+    --mqvym51h: #dadbdd;
+    --mqvym51i: #c5c6c9;
+    --mqvym51j: #b5b6ba;
+    --mqvym51k: #95979d;
+    --mqvym51l: #74767e;
+    --mqvym51m: #62646a;
+    --mqvym51n: #404145;
+    --mqvym51o: #222325;
+    --mqvym51p: #f8f9e5;
+    --mqvym51q: #f1f4cb;
+    --mqvym51r: #edf2b3;
+    --mqvym51s: #e8f094;
+    --mqvym51t: #e3ee74;
+    --mqvym51u: #daea3d;
+    --mqvym51v: #d0e500;
+    --mqvym51w: #bbce00;
+    --mqvym51x: #7d8900;
+    --mqvym51y: #687200;
+    --mqvym51z: #465a00;
+    --mqvym520: #254200;
+    --mqvym521: #fff6f2;
+    --mqvym522: #ffe0d4;
+    --mqvym523: #ffc9b4;
+    --mqvym524: #ffa987;
+    --mqvym525: #ff976e;
+    --mqvym526: #ff8758;
+    --mqvym527: #ff7640;
+    --mqvym528: #e0612e;
+    --mqvym529: #c65325;
+    --mqvym52a: #8f2900;
+    --mqvym52b: #6f2000;
+    --mqvym52c: #421300;
+    --mqvym52d: #fff5f8;
+    --mqvym52e: #ffd3e2;
+    --mqvym52f: #ffc3d8;
+    --mqvym52g: #ffb1cd;
+    --mqvym52h: #ffa1c3;
+    --mqvym52i: #ff8eb7;
+    --mqvym52j: #ff80ae;
+    --mqvym52k: #ef6d94;
+    --mqvym52l: #d95f83;
+    --mqvym52m: #be5272;
+    --mqvym52n: #983e59;
+    --mqvym52o: #4d1727;
+    --mqvym52p: #f8f0ff;
+    --mqvym52q: #e8d4fb;
+    --mqvym52r: #d8b9f7;
+    --mqvym52s: #c89df3;
+    --mqvym52t: #b881f0;
+    --mqvym52u: #a866ec;
+    --mqvym52v: #984ae8;
+    --mqvym52w: #8842d0;
+    --mqvym52x: #7739b9;
+    --mqvym52y: #6731a1;
+    --mqvym52z: #56288a;
+    --mqvym530: #462072;
+    --mqvym531: #ffeded;
+    --mqvym532: #fed0d0;
+    --mqvym533: #fcb3b3;
+    --mqvym534: #fb9797;
+    --mqvym535: #fa7a7a;
+    --mqvym536: #f85d5d;
+    --mqvym537: #f74040;
+    --mqvym538: #d93c3c;
+    --mqvym539: #c43333;
+    --mqvym53a: #ab2d2d;
+    --mqvym53b: #912626;
+    --mqvym53c: #782020;
+    --mqvym53d: #ecfcff;
+    --mqvym53e: #cdf5fb;
+    --mqvym53f: #afedf7;
+    --mqvym53g: #92e6f3;
+    --mqvym53h: #75dfee;
+    --mqvym53i: #57d7ea;
+    --mqvym53j: #3ad0e6;
+    --mqvym53k: #30b8cb;
+    --mqvym53l: #25a1b0;
+    --mqvym53m: #1b8996;
+    --mqvym53n: #10727b;
+    --mqvym53o: #065a60;
+    --mqvym53p: #fff7ee;
+    --mqvym53q: #ffecd1;
+    --mqvym53r: #ffe0b3;
+    --mqvym53s: #ffd596;
+    --mqvym53t: #ffca79;
+    --mqvym53u: #ffbe5b;
+    --mqvym53v: #ffb33e;
+    --mqvym53w: #e6a139;
+    --mqvym53x: #cd8e33;
+    --mqvym53y: #b47c2e;
+    --mqvym53z: #9b6928;
+    --mqvym540: #825723;
+}
+
