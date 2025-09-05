@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html{
+html.toggle{
     overflow-y: hidden;
 }
 
@@ -37,16 +37,16 @@ html{
     --mqvym50: transparent;
     --mqvym51: inherit;
     --mqvym52: currentColor;
-    --mqvym53: rgb(12, 12, 13);
-    --mqvym54: rgba(98, 100, 106, .2);
-    --mqvym55: rgba(98, 100, 106, .25);
-    --mqvym56: rgba(98, 100, 106, .4);
+    --mqvym53: #0c0c0d;
+    --mqvym54: #62646a33;
+    --mqvym55: #62646a40;
+    --mqvym56: #62646a66;
     --mqvym57: #fff;
-    --mqvym58: hsla(0, 0%, 100%, .1);
+    --mqvym58: #ffffff1a;
     --mqvym59: hsla(0, 0%, 100%, .2);
     --mqvym5a: hsla(0, 0%, 100%, .5);
-    --mqvym5b: hsla(0, 0%, 100%, .8);
-    --mqvym5c: hsla(0, 0%, 100%, .9);
+    --mqvym5b: #ffffffcc;
+    --mqvym5c: #ffffffe6;
     --mqvym5d: #f0f4ff;
     --mqvym5e: #d4defb;
     --mqvym5f: #b9c9f7;

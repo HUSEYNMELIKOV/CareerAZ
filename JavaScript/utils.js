@@ -1,4 +1,5 @@
-window.$ = (selector, all = false) => all ? document.querySelectorAll(selector) : document.querySelector(selector);
+window.$ = (selector, all = false) => all ? document.querySelectorAll(selector) 
+: document.querySelector(selector);
 window.$id = (id) => document.getElementById(id);
 window.$cc = (el, className, action) => {
      if (action === "add") {

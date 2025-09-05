@@ -11,7 +11,6 @@
 
      header .top-container nav {
           padding-left: 6px;
-
           li {
 
                button:not(.dropdown-content button),
@@ -19,6 +18,12 @@
                     padding: 6px 14px;
                     font-size: 14px;
                }
+          }
+     }
+     section.banner .contents{
+          padding: 8% 32px 32px !important;
+          div.content-container{
+               width: 90% ;
           }
      }
 }
@@ -32,7 +37,7 @@
           display: none;
      }
 
-     header .top-container .input-search {
+     header .top-container .for-observer {
           margin-left: 12px;
 
           .search-btn-box {
@@ -97,7 +102,30 @@
                padding-right: 14px !important;
           }
      }
-     
+     section.banner .container .bg-video{
+          display: none;
+     }
+     section.banner .contents{
+          position: static !important;
+     }
+     section.banner div.bottom-content{
+          display: none !important;
+     }
+     section.banner .contents .categories ul{
+          display: none !important;
+     }
+     .layout .banner .contents .content-container{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          h1{
+               text-align: center !important;
+               line-height: 110% !important;
+          }
+          div.banner-search{
+               width: 80%;
+          }
+     }
 
 }
 
@@ -105,7 +133,6 @@
      header .top-container .input-search {
           display: none;
      }
-
      header .top-container {
           justify-content: space-between;
      }

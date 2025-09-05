@@ -1,0 +1,36 @@
+{
+     "categories": [
+          {
+               "name": "Website Development"
+          },
+          {
+               "name": "Video Editing"
+          },
+          {
+               "name": "Graphics & Design"
+          },
+          {
+               "name": "Photography"
+          },
+          {
+               "name": "Music & Audio"
+          }
+     ],
+     "trustedBy": [
+          {
+               "svg": "/assets/svg/google.svg"
+          },
+          {
+               "svg": "/assets/svg/netflix.svg"
+          },
+          {
+               "svg": "/assets/svg/meta.svg"
+          },
+          {
+               "svg": "/assets/svg/pg.svg"
+          },
+          {
+               "svg": "/assets/svg/paypal.svg"
+          }
+     ]
+}

@@ -3,8 +3,8 @@ let options = [
      { lang: "az", status: false }
 ];
 
-localStorage.getItem("langOption") ? options = JSON.parse(localStorage.getItem("langOption")) 
-     : localStorage.setItem("langOption", JSON.stringify(options)); 
+localStorage.getItem("langOption") ? options = JSON.parse(localStorage.getItem("langOption"))
+     : localStorage.setItem("langOption", JSON.stringify(options));
 const getLangData = async () => {
      try {
           let response = await fetch("/Data/lang.json");
@@ -15,7 +15,10 @@ const getLangData = async () => {
      } catch (error) {
           console.error(error);
      } finally {
-          setTimeout(() => $cc($(".loader-container"), "open", "remove"), 1000);
+          setTimeout(() => {
+               $cc($(".loader-container"), "open", "remove");
+               $cc($("html"), "toggle", "remove");
+          }, 1000);
      }
 };
 

@@ -34,11 +34,18 @@ header .top-container .logo-box-1 {
           object-fit: cover;
      }
 }
-
-header .top-container .input-search {
+header .top-container .input-search{
      width: 100%;
      position: relative;
-
+     display: flex;
+}
+header .top-container .for-observer.visible{
+     display: flex;
+}
+header .top-container .for-observer {
+     width: 100%;
+     position: relative;
+     display: none;
      #search_input {
           padding: 10px 2px 10px 16px;
           border: 1px solid var(--mqvym51i);
@@ -49,7 +56,7 @@ header .top-container .input-search {
           font-size: 16px;
           width: 75%;
      }
-
+     
      #search_input:focus {
           border-color: var(--mqvym51o);
      }
