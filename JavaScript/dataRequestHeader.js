@@ -1,4 +1,4 @@
-$on(document,"DOMContentLoaded", async () => {
+const getJobs = async () => {
      try {
           let response = await fetch("/Data/jobs.json");
           let data = await response.json();
@@ -6,8 +6,11 @@ $on(document,"DOMContentLoaded", async () => {
      } catch (err) {
           console.error(err);
      }
-});
-
+};
+$on(document,"DOMContentLoaded", getJobs )
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getJobs); 
+console.log(window.allFetches)
 const loadSidebarCategories = (data) => {
      const collapseWrapperUl = $(".wrapper-collapse ul");
      data[0].jobsCategories.categories.forEach((categorie) => {

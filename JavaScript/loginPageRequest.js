@@ -23,7 +23,8 @@ const getData = async () => {
 };
 
 $on(document, "DOMContentLoaded", getData);
-
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getData()); 
 $on($("header .loginBtn"), "click", async function () {
      if (!state.chackBeforeClick) await getData();
      loadPageText("login");

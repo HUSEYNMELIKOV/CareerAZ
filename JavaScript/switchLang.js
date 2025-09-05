@@ -14,15 +14,12 @@ const getLangData = async () => {
           });
      } catch (error) {
           console.error(error);
-     } finally {
-          setTimeout(() => {
-               $cc($(".loader-container"), "open", "remove");
-               $cc($("html"), "toggle", "remove");
-          }, 1000);
-     }
+     } 
 };
 
 $on(document, "DOMContentLoaded", getLangData);
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getLangData()); 
 const switchLang = (lang) => {
      $("header #search_input").placeholder = lang.header.searchInput;
      $("header #pro").innerHTML = lang.header.dropdownPro.dropText + ` <i class="fa-solid fa-chevron-down"></i>`;
@@ -91,9 +88,7 @@ tabOptions.forEach(btn => {
                     });
                }
           });
-
-          $cc($(".loader-container"), "open", "add");
-          getLangData();
+          location.reload();
      });
 });
 
@@ -119,8 +114,8 @@ sideBarOptions.forEach(btn => {
                }
           });
 
-          $cc($(".loader-container"), "open", "add");
-          getLangData();
+          location.reload();
+
      });
 });
 tabButtons.forEach(button => {

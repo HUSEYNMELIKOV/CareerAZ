@@ -1,5 +1,5 @@
 
-$on(document, "DOMContentLoaded", async function () {
+const getSectionCategories = async () => {
      try {
           let response = await fetch("/Data/sectionCategories.json");
           let data = await response.json();
@@ -7,7 +7,10 @@ $on(document, "DOMContentLoaded", async function () {
      } catch (err) {
           console.error(err);
      }
-});
+};
+$on(document, "DOMContentLoaded", getSectionCategories) 
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getSectionCategories()); 
 
 const getDataSection_1 = (data) => {
      data.categories.forEach(obj => {

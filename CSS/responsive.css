@@ -124,6 +124,9 @@
           }
           div.banner-search{
                width: 80%;
+               input{
+                    font-size: 16px
+               }
           }
      }
 
