@@ -66,6 +66,6 @@ $on(sidebar,"click", function (e) {
      if (element) {
           let collapseWrapper = element.parentElement.querySelector(".wrapper-collapse");
           $cc(collapseWrapper, "open", "toggle");
-          $cc($(".fa-angle-down"), "isToggle", "toggle");
+          $cc(collapseWrapper.parentElement.querySelector(".fa-angle-down"), "isToggle", "toggle");
      }
 })

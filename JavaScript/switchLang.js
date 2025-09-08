@@ -19,7 +19,7 @@ const getLangData = async () => {
 
 $on(document, "DOMContentLoaded", getLangData);
 window.allFetches = window.allFetches ? window.allFetches : [];
-window.allFetches.push(getLangData()); 
+window.allFetches.push(getLangData); 
 const switchLang = (lang) => {
      $("header #search_input").placeholder = lang.header.searchInput;
      $("header #pro").innerHTML = lang.header.dropdownPro.dropText + ` <i class="fa-solid fa-chevron-down"></i>`;

@@ -64,8 +64,11 @@ section.banner .contents .content-container{
                right: 4px;
           }
      }
-
 }
+/* @media (max-width: 1250px) {
+     section.banner .contents .content-container 
+} */
+
 section.banner .contents .content-container .categories{
      ul{
           display: flex;

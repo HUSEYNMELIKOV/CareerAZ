@@ -4,63 +4,121 @@
                "categories": [
                     {
                          "id": 1,
-                         "name": "Graphics & Design"
+                         "name": "Programing & Tech",
+                         "icon": "/assets/svg/programming-tech-thin.svg",
+                         "jobs": [
+                              {
+                                   "name": "Web Developer",
+                                   "sectionImgURL": "/assets/images/website-development.jpg",
+                                   "isContentSection": true
+                              },
+                              {
+                                   "name": "Mobile App Developer",
+                                   "sectionImgURL": "/assets/images/mobile-app-development.jpg",
+                                   "isContentSection": true
+                              },
+                              {
+                                   "name": "Data Analyst",
+                                   "sectionImgURL": "/assets/images/data-analytics.jpg",
+                                   "isContentSection": true
+                              }
+                         ]
                     },
                     {
                          "id": 2,
-                         "name": "Digital Marketing"
+                         "name": "Video & Animation",
+                         "icon": "/assets/svg/video-animation-thin.svg",
+                         "jobs": [
+                              {
+                                   "name": "Video Editor",
+                                   "sectionImgURL": "/assets/images/video-editing.jpg",
+                                   "isContentSection": true
+
+                              },
+                              {
+                                   "name": "2D/3D Animator",
+                                   "sectionImgURL": "/assets/images/animation.jpg",
+                                   "isContentSection": true
+
+                              },
+                              {
+                                   "name": "Motion Graphics Designer",
+                                   "sectionImgURL": "/assets/images/motion-graphics.jpg",
+                                   "isContentSection": true
+
+                                   
+                              }
+                         ]
                     },
                     {
                          "id": 3,
-                         "name": "Writing & Translation"
+                         "name": "Graphics & Design",
+                         "icon": "/assets/svg/graphics-design-thin.svg",
+                         "jobs": [
+                              {
+                                   "name": "UI/UX Designer",
+                                   "sectionImgURL": "/assets/images/ui-ux.jpeg",
+                                   "isContentSection": true
+
+                              },
+                              {
+                                   "name": "Logo Designer",
+                                   "sectionImgURL": "/assets/images/logo-design.jpeg",
+                                   "isContentSection": true
+
+                              },
+                              {
+                                   "name": "Illustrator",
+                                   "sectionImgURL": "/assets/images/illustrator.jpg",
+                                   "isContentSection": false
+
+                              }
+                         ]
                     },
                     {
                          "id": 4,
-                         "name": "Video & Animation"
+                         "name": "Writing & Translations",
+                         "icon": "/assets/svg/writing-translation-thin.svg",
+                         "jobs": [
+                              {
+                                   "name": "Content Writer",
+                                   "sectionImgURL": "/assets/images/content-writer.jpg",
+                                   "isContentSection": true
+                              },
+                              {
+                                   "name": "Copywriter",
+                                   "sectionImgURL": "/assets/images/copywriting.jpg",
+                                   "isContentSection": false
+
+                              },
+                              {
+                                   "name": "Translator",
+                                   "sectionImgURL": "/assets/images/translation.jpg",
+                                   "isContentSection": false
+                              }
+                         ]
                     },
                     {
                          "id": 5,
-                         "name": "Music & Audio"
-                    },
-                    {
-                         "id": 6,
-                         "name": "Programming & Tech"
-                    },
-                    {
-                         "id": 7,
-                         "name": "AI Services"
-                    },
-                    {
-                         "id": 8,
-                         "name": "Consulting"
-                    },
-                    {
-                         "id": 9,
-                         "name": "Data"
-                    },
-                    {
-                         "id": 10,
-                         "name": "Business"
-                    },
-                    {
-                         "id": 11,
-                         "name": "Personal Growth"
-                    },
-                    {
-                         "id": 12,
-                         "name": "Photography"
-                    },
-                    {
-                         "id": 13,
-                         "name": "Finance"
-                    },
-                    {
-                         "id": 14,
-                         "name": "End-to-End Projects"
-                    },
-                    {
-                         "id": 15,
-                         "name": "Service Catalog"
+                         "name": "Music & Audio",
+                         "icon": "/assets/svg/music-audio-thin.svg",
+                         "jobs": [
+                              {
+                                   "name": "Music Producer",
+                                   "sectionImgURL": "/assets/images/music-producer.jpg",
+                                   "isContentSection": true
+                              },
+                              {
+                                   "name": "Sound Designer",
+                                   "sectionImgURL": "/assets/images/sound-design.jpg",
+                                   "isContentSection": false
+                              },
+                              {
+                                   "name": "Voice Over Artist",
+                                   "sectionImgURL": "/assets/images/voice-over.jpg",
+                                   "isContentSection": false
+                              }
+                         ]
                     }
                ]
           }

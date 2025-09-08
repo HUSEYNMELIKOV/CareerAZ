@@ -10,7 +10,7 @@ const getSectionCategories = async () => {
 };
 $on(document, "DOMContentLoaded", getSectionCategories) 
 window.allFetches = window.allFetches ? window.allFetches : [];
-window.allFetches.push(getSectionCategories()); 
+window.allFetches.push(getSectionCategories); 
 
 const getDataSection_1 = (data) => {
      data.categories.forEach(obj => {

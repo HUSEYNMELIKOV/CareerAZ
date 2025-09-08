@@ -10,7 +10,6 @@ const getJobs = async () => {
 $on(document,"DOMContentLoaded", getJobs )
 window.allFetches = window.allFetches ? window.allFetches : [];
 window.allFetches.push(getJobs); 
-console.log(window.allFetches)
 const loadSidebarCategories = (data) => {
      const collapseWrapperUl = $(".wrapper-collapse ul");
      data[0].jobsCategories.categories.forEach((categorie) => {

@@ -20,3 +20,4 @@ window.$on = function (el, event, handler) {
           el.addEventListener(event, handler);
      }
 };
+
