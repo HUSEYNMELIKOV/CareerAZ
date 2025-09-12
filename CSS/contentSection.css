@@ -106,7 +106,7 @@
           .card{
                scroll-snap-align: start; 
                scroll-snap-stop: always;       
-               background-color: var(--mqvym52y);
+               background-color: var(--mqvym530);
                border-radius: 16px;
                padding: 22px 10px 10px;
                display: flex;
@@ -170,4 +170,152 @@
           transform: translate(-50%, calc(50% - 5px));
      }
      
+}
+
+.content-section .container-3 {
+     margin-top: 64px;
+     padding: 56px 32px;
+     background-color: var(--mqvym5p);
+     border-radius: 12px;
+     .pro-content{
+          display: flex;
+          .header{
+               margin-bottom: 32px;
+               h1{
+                    font-size: clamp(16px, 2vw, 36px);
+                    strong{
+                         font-weight: 600;
+                    }
+               }
+          }
+          .desc-content{
+               margin-bottom: 32px;
+               h2{
+                    font-size: clamp(16px, 2vw + 1rem, 48px);
+
+                    span{
+                         color: var(--mqvym517);
+                    }
+               }
+               
+          }
+          .pro-param{
+               display: grid;
+               grid-template-columns: repeat(2,1fr);
+               gap: 12px;
+               margin-bottom: 32px;
+               h4{
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+               }
+               p{
+                    font-size: 14px;
+                    color: var(--mqvym51o);
+               }
+          }
+          .try button{
+               padding: 8px 16px;
+               border-radius: 4px;
+          }
+     }
+     .description-pro{
+          width: 100%;
+     }
+     
+     .img-box{
+          width: 100%;
+          display: flex;
+          align-items: ce;
+          img{
+               width: 100%;
+               object-fit: contain;
+          }
+     }
+}
+
+.content-section .container-4 {
+     display: flex;
+     flex-direction: column;
+     margin-top: 24px;
+     gap: 12px;
+     padding: 46px 0px;
+     .header{
+          font-size: clamp(16px, 2vw, 24px);
+     }
+     .items{
+          display: flex;
+          justify-content: space-between;
+          margin-top: 12px;
+          gap: 8px;
+          .item{
+               flex: 1;
+          }
+     }
+
+}
+.content-section .container-5{
+     .header{
+          z-index: 10;
+          width: 100%;
+          background: linear-gradient(120deg,rgba(143, 41, 0, 1) 0%, rgba(255, 118, 64, 1) 100%);
+          background-color: white; 
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-size: 200% 200%; 
+          animation: gradient-rotate 1s ease-in-out infinite alternate;
+          padding: 0px 32px;
+          h1{
+               width: 100%;
+               font-size: clamp(16px, 7vw, 64px);
+               color: #fff;
+               font-weight: 800;
+               letter-spacing: 2px;
+               text-align: center;
+               color: var(--mqvym52a);
+               
+          }
+     }
+}
+@keyframes gradient-rotate {
+     0% {
+       background-position: 0% 50%;
+     }
+     100% {
+       background-position: 100% 50%;
+     }
+   }
+.content-section .container-6{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 32px;
+     background-color: var(--mqvym52o);
+     padding: 32px 32px 48px;
+     margin-top: 64px;
+     border-radius: 12px;
+     h1{
+          color: #fff;
+          font-weight: 600;
+          font-size: clamp(16px, 2vw + 1rem, 48px);
+          text-align: center;
+     }
+     span{
+          color: var(--mqvym527);
+          font-family: 'Times New Roman', Times, serif;
+          font-size: clamp(16px, 2vw + 1rem, 54px);
+     }
+     button{
+          padding: 8px 16px;
+          border: none;
+          background-color: #fff;
+          color: var(--mqvym51o);
+          font-weight: 700;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 16px;
+     }
+     button:hover{
+          opacity: 0.8;
+     }
 }

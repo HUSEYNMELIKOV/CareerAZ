@@ -9,8 +9,7 @@ const getSectionCategories = async () => {
      }
 };
 $on(document, "DOMContentLoaded", getSectionCategories) 
-window.allFetches = window.allFetches ? window.allFetches : [];
-window.allFetches.push(getSectionCategories); 
+
 
 const getDataSection_1 = (data) => {
      data.categories.forEach(obj => {
@@ -54,3 +53,5 @@ const Observer = new IntersectionObserver((entries) => {
 
 Observer.observe($("section.banner .banner-search"));
 
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getSectionCategories); 

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 
 <head>
 
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
      <link rel="stylesheet" href="/CSS/header.css">
      <link rel="stylesheet" href="/CSS/root.css">
      <link rel="stylesheet" href="/CSS/responsive.css">
@@ -13,7 +15,7 @@
      <link rel="stylesheet" href="/CSS/switchLang.css">
      <link rel="stylesheet" href="/CSS/sectionBanner.css">
      <link rel="stylesheet" href="/CSS/contentSection.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="stylesheet" href="/CSS/footer.css">
      <title>CareerAz</title>
 </head>
 
@@ -34,19 +36,19 @@
                               <img src="/assets/images/loginPage-bg-img.png" width="100%" alt="pageBg.png">
                          </div>
                          <div class="login-description">
-                              <h2>Success starts here</h2>
+                              <h2>Uğur buradan başlayır</h2>
                               <ul class="Lpage-list">
                                    <li>
                                         <i class="fa-solid fa-check"></i>
-                                        <p>Over 700 categories</p>
+                                        <p>5-dən çox kateqoriya</p>
                                    </li>
                                    <li>
                                         <i class="fa-solid fa-check"></i>
-                                        <p>Quality work done faster</p>
+                                        <p>Keyfiyyətli iş daha sürətli tamamlanır</p>
                                    </li>
                                    <li>
                                         <i class="fa-solid fa-check"></i>
-                                        <p>Access to talent and businesses across the globe</p>
+                                        <p>Dünya üzrə istedad və bizneslərə çıxış</p>
                                    </li>
                               </ul>
                          </div>
@@ -63,21 +65,21 @@
                               </div>
                          </div>
                          <div class="right-header">
-                              <h2>Test header</h2>
-                              <p>test param <span>Sign in</span></p>
+                              <h2>Test başlığı</h2>
+                              <p>test paraqrafı <span>Daxil ol</span></p>
                          </div>
                          <div class="with-x-page">
                               <button class="with-google with">
                                    <img src="/assets/svg/google-logo.svg">
-                                   <p>Continue with Google</p>
+                                   <p>Google ilə davam et</p>
                               </button>
                               <button class="with-Email with">
                                    <img src="/assets/svg/eMail-logo.svg">
-                                   <p>Continue with Email</p>
+                                   <p>Email ilə davam et</p>
                               </button>
                               <div class="or-line">
                                    <span></span>
-                                   <p>OR</p>
+                                   <p>VƏ YA</p>
                                    <span></span>
                               </div>
                               <div class="apple-facebook">
@@ -93,9 +95,10 @@
                          </div>
                          <div class="right-footer">
                               <p>
-                                   By joining, you agree to the Fiverr <a href="#">Terms of Servic</a>e and to
-                                   occasionally receive emails from us. Please read our <a href="#">Privacy Policy</a>
-                                   to learn how we use your personal data.
+                                   Daxil olaraq, siz Fiverr <a href="#">Xidmət Şərtləri</a> ilə razılaşırsınız və
+                                   vaxtaşırı bizdən e-poçt almağa etiraz etmirsiniz. Şəxsi məlumatlarınızdan necə
+                                   istifadə
+                                   etdiyimizi öyrənmək üçün zəhmət olmasa <a href="#">Məxfilik Siyasətimizi</a> oxuyun.
                               </p>
                          </div>
                     </div>
@@ -103,7 +106,7 @@
                          <div class="backParent">
                               <button class="closeLogin">
                                    <i class="fa-solid fa-arrow-left"></i>
-                                   <span>Back</span>
+                                   <span>Geri</span>
                               </button>
                               <div class="logo-box">
                                    <img src="/assets/svg/logo.svg">
@@ -115,22 +118,22 @@
                               </div>
                          </div>
                          <div class="right-header">
-                              <h2>Continue with your email or username</h2>
+                              <h2>Email və ya istifadəçi adınızla davam edin</h2>
                          </div>
-                         <form action="/login" method="post" style="height: 100%;">
+                         <div class="form" style="height: 100%;">
                               <div class="inputs">
                                    <div class="Email-or-Username lpInp">
                                         <div class="label-text">
-                                             <label for="lp-email">Email or username</label>
+                                             <label for="lp-email">Email və ya istifadəçi adı</label>
                                         </div>
                                         <div class="input">
-                                             <input type="email" name="email" id="lp-email">
+                                             <input type="text" name="email" id="lp-email">
                                              <div class="status"></div>
                                         </div>
                                    </div>
                                    <div class="password lpInp">
                                         <div class="label-text">
-                                             <label for="lp-password">Password</label>
+                                             <label for="lp-password">Şifrə</label>
                                         </div>
                                         <div class="input">
                                              <input type="password" name="password" id="lp-password">
@@ -140,22 +143,26 @@
                                                   </button>
                                              </div>
                                         </div>
+
                                         <div class="forgot-parent">
-                                             <a href="#" class="forgot-psw">Forgot password?</a>
+                                             <p id="warningMSG-lp" style="color: rgb(143, 30, 30); width: max-content;">
+                                             </p>
+                                             <a href="#" class="forgot-psw">Şifrəni unutmusunuz?</a>
                                         </div>
                                    </div>
 
                               </div>
                               <div class="submit-form">
-                                   <button class="submit __dark-btn-b1">Sign in</button>
+                                   <button class="submit __dark-btn-b1" id="submit-lp">Daxil ol</button>
                               </div>
-                         </form>
+                         </div>
 
                          <div class="right-footer">
                               <p>
-                                   By joining, you agree to the Fiverr <a href="#">Terms of Servic</a>e and to
-                                   occasionally receive emails from us. Please read our <a href="#">Privacy Policy</a>
-                                   to learn how we use your personal data.
+                                   Daxil olaraq, siz Fiverr <a href="#">Xidmət Şərtləri</a> ilə razılaşırsınız və
+                                   vaxtaşırı bizdən e-poçt almağa etiraz etmirsiniz. Şəxsi məlumatlarınızdan necə
+                                   istifadə
+                                   etdiyimizi öyrənmək üçün zəhmət olmasa <a href="#">Məxfilik Siyasətimizi</a> oxuyun.
                               </p>
                          </div>
                     </div>
@@ -163,7 +170,7 @@
                          <div class="backParent">
                               <button class="closeLogin">
                                    <i class="fa-solid fa-arrow-left"></i>
-                                   <span>Back</span>
+                                   <span>Geri</span>
                               </button>
                               <div class="logo-box">
                                    <img src="/assets/svg/logo.svg">
@@ -175,13 +182,13 @@
                               </div>
                          </div>
                          <div class="right-header">
-                              <h2>Continue with your email</h2>
+                              <h2>Emailinizlə davam edin</h2>
                          </div>
-                         <form action="/register" method="post" style="height: 100%;">
+                         <div class="form">
                               <div class="inputs">
                                    <div class="Username lpInp">
                                         <div class="label-text">
-                                             <label for="rp-name">Create Name</label>
+                                             <label for="rp-name">Ad yaradın</label>
                                         </div>
                                         <div class="input">
                                              <input type="text" name="username" id="rp-name">
@@ -199,7 +206,7 @@
                                    </div>
                                    <div class="password lpInp">
                                         <div class="label-text">
-                                             <label for="rp-password">Password</label>
+                                             <label for="rp-password">Şifrə</label>
                                         </div>
                                         <div class="input">
                                              <input type="password" name="password" class="rp-password"
@@ -210,19 +217,20 @@
                                                   </button>
                                              </div>
                                         </div>
+                                        <p id="warningMSG-rp" style="color: rgb(143, 30, 30);"></p>
                                         <div class="parol-status">
                                              <ul>
                                                   <li><i class="fa-regular fa-circle-check"></i>
-                                                       <p>At least 8 characters</p>
+                                                       <p>Ən azı 8 simvol</p>
                                                   </li>
                                                   <li><i class="fa-regular fa-circle-check"></i>
-                                                       <p>At least 1 uppercase letter</p>
+                                                       <p>Ən azı 1 böyük hərf</p>
                                                   </li>
                                                   <li><i class="fa-regular fa-circle-check"></i>
-                                                       <p>At least 1 lowercase letter</p>
+                                                       <p>Ən azı 1 kiçik hərf</p>
                                                   </li>
                                                   <li><i class="fa-regular fa-circle-check"></i>
-                                                       <p>At least 1 number</p>
+                                                       <p>Ən azı 1 rəqəm</p>
                                                   </li>
                                              </ul>
                                         </div>
@@ -230,15 +238,16 @@
                               </div>
 
                               <div class="submit-form">
-                                   <button class="submit __dark-btn-b1">Continue</button>
+                                   <button class="submit __dark-btn-b1" id="submit-rp">Davam et</button>
                               </div>
-                         </form>
+                         </div>
 
                          <div class="right-footer">
                               <p>
-                                   By joining, you agree to the Fiverr <a href="#">Terms of Servic</a>e and to
-                                   occasionally receive emails from us. Please read our <a href="#">Privacy Policy</a>
-                                   to learn how we use your personal data.
+                                   Daxil olaraq, siz Fiverr <a href="#">Xidmət Şərtləri</a> ilə razılaşırsınız və
+                                   vaxtaşırı bizdən e-poçt almağa etiraz etmirsiniz. Şəxsi məlumatlarınızdan necə
+                                   istifadə
+                                   etdiyimizi öyrənmək üçün zəhmət olmasa <a href="#">Məxfilik Siyasətimizi</a> oxuyun.
                               </p>
                          </div>
                     </div>
@@ -248,15 +257,15 @@
                <div class="sidebar flex" id="sidebar">
                     <div class="sidebar-header w-100">
                          <ul class="links">
-                              <li><a href="#" class="join">Join CareerAz</a></li>
+                              <li><a href="#" class="join registerBtn">CareerAz-a Qoşulun</a></li>
                          </ul>
                     </div>
                     <div class="sidebar-menu">
                          <ul class="menu-selections">
-                              <li><a href="#" class="sign-in link w-100">Sign in</a></li>
+                              <li><a href="#" class="sign-in loginBtn link w-100">Daxil ol</a></li>
                               <li>
                                    <button class="categories wrapper flex w-100">
-                                        <span>Browse categories</span><i class="fa-solid fa-angle-down"></i>
+                                        <span>Kateqoriyalara bax</span><i class="fa-solid fa-angle-down"></i>
                                    </button>
                                    <div class="wrapper-collapse">
                                         <ul></ul>
@@ -264,36 +273,16 @@
                               </li>
                               <li>
                                    <button class="Explore wrapper flex w-100">
-                                        <span>Explore</span><i class="fa-solid fa-angle-down"></i>
+                                        <span>Kəşf et</span><i class="fa-solid fa-angle-down"></i>
                                    </button>
                                    <div class="wrapper-collapse">
                                         <ul>
-                                             <button class="explore-selections listelement">
-                                                  <span>Answers</span>
+                                             <button class="explore-selections listelement loginBtn">
+                                                  <span>Elan yerləşdir</span>
                                                   <i class="fa-solid fa-arrow-right"></i>
                                              </button>
-                                             <button class="explore-selections listelement">
-                                                  <span>Guides</span>
-                                                  <i class="fa-solid fa-arrow-right"></i>
-                                             </button>
-                                             <button class="explore-selections listelement">
-                                                  <span>Learn</span>
-                                                  <i class="fa-solid fa-arrow-right"></i>
-                                             </button>
-                                             <button class="explore-selections listelement">
-                                                  <span>Logo-maker</span>
-                                                  <i class="fa-solid fa-arrow-right"></i>
-                                             </button>
-                                             <button class="explore-selections listelement">
-                                                  <span>Community</span>
-                                                  <i class="fa-solid fa-arrow-right"></i>
-                                             </button>
-                                             <button class="explore-selections listelement">
-                                                  <span>podcast</span>
-                                                  <i class="fa-solid fa-arrow-right"></i>
-                                             </button>
-                                             <button class="explore-selections listelement">
-                                                  <span>Blog</span>
+                                             <button class="explore-selections listelement loginBtn">
+                                                  <span>Veb Səhifədə mövcud elanlara baxın</span>
                                                   <i class="fa-solid fa-arrow-right"></i>
                                              </button>
                                         </ul>
@@ -307,122 +296,24 @@
                                         <ul>
                                              <li>
                                                   <button class="pro-selections listelement">
-                                                       <span>I'am looking to hire</span>
+                                                       <span>Mən işçi axtarıram</span>
                                                   </button>
                                              </li>
                                              <li>
                                                   <button class="pro-selections listelement">
-                                                       <span>I want to offer pro services</span>
+                                                       <span>Mən pro xidmətlər təklif etmək istəyirəm</span>
                                                   </button>
                                              </li>
                                         </ul>
                                    </div>
                               </li>
-                              <li><span class="subheader">General</span></li>
-                              <li><a href="#" class="home link">Home</a></li>
-                              <li>
-                                   <button class="change_lang wrapper flex w-100">
-                                        <span>EN <i class="fa solid fa-globe"></i></span>
-                                        <i class="fa-solid fa-angle-down"></i>
-                                   </button>
-                                   <div class="wrapper-collapse">
-                                        <ul>
-                                             <li>
-                                                  <button class="lang-selections listelement" value="az">
-                                                       <span>AZE</span>
-                                                       <i class="fa-solid fa-check"></i>
-                                                  </button>
-                                             </li>
-                                             <li>
-                                                  <button class="lang-selections listelement" value="en">
-                                                       <span>ENG</span>
-                                                       <i class="fa-solid fa-check"></i>
-                                                  </button>
-                                             </li>
-                                        </ul>
-                                   </div>
-                              </li>
-                              <li>
-                                   <button class="change_currency wrapper flex w-100">
-                                        <span>USD <i class="fa solid fa-usd"></i></span>
-                                        <i class="fa-solid fa-angle-down"></i>
-                                   </button>
-                                   <div class="wrapper-collapse">
-                                        <ul>
-                                             <li>
-                                                  <button class="currency-selections listelement">
-                                                       <span>USD <i class="fa-solid fa-dollar"></i></span>
-                                                       <i class="fa-solid fa-check"></i>
-                                                  </button>
-                                             </li>
-                                             <li>
-                                                  <button class="currency-selections listelement">
-                                                       <span>AZE ₼</span>
-                                                  </button>
-                                             </li>
-                                        </ul>
-                                   </div>
-                              </li>
+                              <li><span class="subheader">Ümumi</span></li>
+                              <li><a href="#" class="home link">Ana Səhifə</a></li>
                          </ul>
                     </div>
                </div>
           </div>
-          <div class="switchLang-overlay w-100">
-               <div class="container">
-                    <div class="header flex">
-                         <h1>Select your preferences</h1>
-                         <button class="close"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                    <div class="screen">
 
-                         <ul class="tab flex">
-                              <li><button class="lang st active">Language</button></li>
-                              <li><button class="currency st">Currency</button></li>
-                         </ul>
-                         <div class="overflow">
-                              <ul class="list-lang list open">
-                                   <li>
-                                        <button class="option-lang option" value="az">
-                                             <i class="fa-solid fa-check"></i>
-                                             <div class="text">
-                                                  <span class="lang name">Azərbaycan</span>
-                                             </div>
-                                        </button>
-                                   </li>
-                                   <li>
-                                        <button class="option-lang option" value="en">
-                                             <i class="fa-solid fa-check"></i>
-                                             <div class="text">
-                                                  <span class="lang name">English</span>
-                                             </div>
-                                        </button>
-                                   </li>
-                              </ul>
-                              <ul class="list-currency list">
-                                   <li>
-                                        <button class="option-currency option">
-                                             <i class="fa-solid fa-check"></i>
-                                             <div class="text">
-                                                  <span class="currency-name">United States Dollar</span>
-                                                  <span class="currency-symbol">USD $</span>
-                                             </div>
-                                        </button>
-                                   </li>
-                                   <li>
-                                        <button class="option-currency option">
-                                             <i class="fa-solid fa-check"></i>
-                                             <div class="text">
-                                                  <span class="currency-name">Azərbaycan manatı</span>
-                                                  <span class="currency-symbol">AZN ₼</span>
-                                             </div>
-                                        </button>
-                                   </li>
-                              </ul>
-                         </div>
-
-                    </div>
-               </div>
-          </div>
           <header class="flex w-100 column-flex">
                <div class="top-container flex w-100">
                     <div class="burger">
@@ -433,7 +324,7 @@
                     </div>
                     <div class="input-search flex ">
                          <div class="for-observer flex">
-                              <input type="text" placeholder="What service are you looking for today?" id="search_input"
+                              <input type="text" placeholder="Bu gün hansı xidməti axtarırsınız?" id="search_input"
                                    name="search_input">
                               <button id="clear_input_value"><i class="fa-solid fa-xmark flex flex-center"></i></button>
                               <div class="search-btn-box">
@@ -449,103 +340,44 @@
                               <button class="hovGray pro_btn" id="pro">Pro <i class="fa-solid fa-chevron-down"></i>
                               </button>
                               <ul class="dropdown-content flex pro column-flex">
-                                   <p class="window-p">Hire vetted freelance talent at Pro</p>
+                                   <p class="window-p">Pro Haqqında</p>
                                    <li class="link">
-                                        <a href="#">
+                                        <a href="#" class="loginBtn">
                                              <div class="icon">
-                                                  <img src="/assets/icons/hd-icon-1.svg">
+                                                  <img src="/assets/icons/hd-icon-1.png" width="50px">
                                              </div>
                                              <div class="description">
-                                                  <h3>Satisfaction guarantee</h3>
-                                                  <p>Money-back guarantee when working with experienced freelancers.</p>
+                                                  <h3>Profsianal Profil</h3>
+                                                  <p>Pro ilə Elanlarınızı və CV lərinizi mükəmməlləşdirin</p>
                                              </div>
                                         </a>
                                    </li>
-                                   <li class="link">
-                                        <a href="#">
-                                             <div class="icon">
-                                                  <img src="/assets/icons/hd-icon-2.svg">
-                                             </div>
-                                             <div class="description">
-                                                  <h3>Pro Business Rewards program</h3>
-                                                  <p>Every Career Pro order brings you closer to exclusive benefits.</p>
-                                             </div>
-                                        </a>
-                                   </li>
-                                   <li class="link">
-                                        <a href="#">
-                                             <div class="icon">
-                                                  <img src="/assets/icons/hd-icon-3.svg">
-                                             </div>
-                                             <div class="description">
-                                                  <h3>Resource services</h3>
-                                                  <p>Fiverr Pro experts will vet and interview freelance talent for you
-                                                  </p>
-                                             </div>
-                                        </a>
-                                   </li>
-                                   <li class="link">
-                                        <a href="#">
-                                             <div class="icon">
-                                                  <img src="/assets/icons/hd-icon-4.svg">
-                                             </div>
-                                             <div class="description">
-                                                  <h3>Cooperation and payments</h3>
-                                                  <p>Collaborate with your team, manage budgets, and hire flexibly.</p>
-                                             </div>
-                                        </a>
-                                   </li>
+
                               </ul>
                          </li>
                          <li id="explore-dropdown" class="dr nav_li">
-                              <button class="hovGray explore_btn" id="explore">Explore <i
+                              <button class="hovGray explore_btn" id="explore">Kəşf et <i
                                         class="fa-solid fa-chevron-down"></i></button>
                               <ul class="dropdown-content column-flex flex explore">
                                    <li class="link">
                                         <a href="#">
-                                             <h3>Cavablar</h3>
-                                             <p>AI tərəfindən dəstəklənir, Fiverr freelancerləri tərəfindən
-                                                  cavablandırılır</p>
+                                             <h3>Elan yerləşdir</h3>
+                                             <p>İş axtarın və müraciət edin və ya işçi tapmaq üçün vakansiya
+                                                  yerləşdirin.</p>
                                         </a>
                                    </li>
                                    <li class="link">
                                         <a href="#">
-                                             <h3>İcma</h3>
-                                             <p>Career komandası və icması ilə əlaqə saxlayın</p>
+                                             <h3>Elanlar</h3>
+                                             <p>Veb səhifədə mövcud elanlara baxın.</p>
                                         </a>
                                    </li>
-                                   <li class="link">
-                                        <a href="#">
-                                             <h3>Bələdçilər</h3>
-                                             <p>Biznes mövzularını əhatə edən dərin təlimatlar</p>
-                                        </a>
-                                   </li>
-                                   <li class="link">
-                                        <a href="#">
-                                             <h3>Podkast</h3>
-                                             <p>Ən yaxşı biznes ağıllarından daxili məsləhətlər</p>
-                                        </a>
-                                   </li>
-                                   <li class="link">
-                                        <a href="#">
-                                             <h3>Öyrən</h3>
-                                             <p>Mütəxəssislər tərəfindən idarə olunan peşəkar onlayn kurslar</p>
-                                        </a>
-                                   </li>
-                                   <li class="link">
-                                        <a href="#">
-                                             <h3>Bloq</h3>
-                                             <p>Xəbərlər, məlumat və icma hekayələri</p>
-                                        </a>
-                                   </li>
+
                               </ul>
                          </li>
-                         <li id="change_lang" class="nav_li ">
-                              <button class="hovGreen">AZ <i class="fa-solid fa-globe"></i></button>
-                         </li>
-                         <li class="seller nav_li flex "><a href="#" class="hovGreen">Become a seller</a></li>
-                         <li class="nav_li "><button class="loginBtn hovGreen">Sign in</button></li>
-                         <li class="nav_li "><button class="registerBtn hovGreen">Join</button></li>
+                         <li class="seller nav_li flex "><a href="#" class="hovGreen">Satıcı ol</a></li>
+                         <li class="nav_li "><button class="loginBtn hovGreen">Daxil ol</button></li>
+                         <li class="nav_li "><button class="registerBtn hovGreen">Qoşul</button></li>
                     </nav>
                </div>
           </header>
@@ -557,10 +389,10 @@
                     <div class="contents">
                          <div class="content-container">
                               <div class="banner-header">
-                                   <h1>Our freelancers <br> will take it from here</h1>
+                                   <h1>İstedad Axtarışları <br> və Karyera İmkanları Məkanı</h1>
                               </div>
                               <div class="banner-search">
-                                   <input type="search" id="search-banner" placeholder="Search for any service">
+                                   <input type="search" id="search-banner" placeholder="Hər hansı bir xidmət axtarın">
                                    <button class="search-btn __dark-btn-b1"><i class="fa-solid fa-search"></i></button>
                               </div>
                               <div class="categories">
@@ -570,7 +402,7 @@
                          </div>
                          <div class="bottom-content">
                               <ul class="trusted-by">
-                                   <span>Trusted By: </span>
+                                   <span>Etibar Edən: </span>
                                    <div class="list">
 
                                    </div>
@@ -594,7 +426,7 @@
                               <img src="/assets/svg/chevron.svg" style="rotate: 180deg;">
                          </button>
                          <div class="popular-services">
-                              <h1>Popular Services</h1>
+                              <h1>Populyar Xidmətlər</h1>
                          </div>
                          <div class="cards parent">
 
@@ -603,9 +435,123 @@
                               <img src="/assets/svg/chevron.svg" style="rotate: 0deg;">
                          </button>
                     </div>
+                    <div class="container-3">
+                         <div class="pro-content">
+                              <div class="description-pro">
+                                   <div class="header">
+                                        <h1><strong>Pro</strong>-da nə var?</h1>
+                                   </div>
+                                   <div class="desc-content">
+                                        <h2>Bizneslər üçün <span>Premium</span> sərbəst işçi həlli</h2>
+                                   </div>
+                                   <div class="pro-param">
+                                        <div class="text">
+                                             <img src="/assets/svg/pro-check.svg">
+                                             <h4>Xüsusi işə götürmə mütəxəssisləri</h4>
+                                             <p>Sizə uyğun istedadı tapmaq və layihənizin hər ehtiyacını görmək üçün bir
+                                                  hesab
+                                                  menecerinə etibar edin.</p>
+                                        </div>
+                                        <div class="text">
+                                             <img src="/assets/svg/pro-check.svg">
+                                             <h4>Məmnuniyyət zəmanəti</h4>
+                                             <p>Qeyri-qənaətbəxş çatdırılmalar üçün zəmanətli geri ödəmə ilə əminliklə
+                                                  sifariş
+                                                  edin.</p>
+                                        </div>
+                                        <div class="text">
+                                             <img src="/assets/svg/pro-check.svg">
+                                             <h4>Qabaqcıl idarəetmə alətləri</h4>
+                                             <p>Sərbəst işçiləri komandanıza və layihələrinizə problemsiz inteqrasiya
+                                                  edin.</p>
+                                        </div>
+                                        <div class="text">
+                                             <img src="/assets/svg/pro-check.svg">
+                                             <h4>Çevik ödəniş modelləri</h4>
+                                             <p>Uzunmüddətli əməkdaşlığı asanlaşdırmaq üçün layihəyə görə ödəyin və ya
+                                                  saatlıq
+                                                  tarifləri seçin.</p>
+                                        </div>
+                                   </div>
+                                   <div class="try">
+                                        <button class="__dark-btn-b1 registerBtn">İndi sına</button>
+                                   </div>
+                              </div>
+                              <div class="img-box">
+                                   <img src="/assets/images/careerAz-pro.png">
+                              </div>
+                         </div>
+                    </div>
+                    <div class="container-4">
+                         <div class="header">
+                              <h1>Sərbəst işçilərlə hər şeyi reallaşdırın</h1>
+                         </div>
+                         <div class="items">
+                              <div class="item">
+                                   <div class="img-box">
+                                        <img src="/assets/svg/categories.svg">
+                                   </div>
+                                   <p>700 kateqoriya üzrə ən yaxşı istedad fonduna çıxış əldə edin</p>
+                              </div>
+                              <div class="item">
+                                   <div class="img-box">
+                                        <img src="/assets/svg/matching.svg">
+                                   </div>
+                                   <p>Sadə, istifadəsi asan uyğunlaşdırma təcrübəsindən həzz alın</p>
+                              </div>
+                              <div class="item">
+                                   <div class="img-box">
+                                        <img src="/assets/svg/quickly.svg">
+                                   </div>
+                                   <p>Keyfiyyətli işləri tez və büdcə daxilində görün</p>
+                              </div>
+                              <div class="item">
+                                   <div class="img-box">
+                                        <img src="/assets/svg/happy.svg">
+                                   </div>
+                                   <p>Yalnız məmnun qaldığınız zaman ödəyin</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="container-5">
+                         <div class="header">
+                              <h1>Müştəri Məmnuniyyəti</h1>
+                         </div>
+                    </div>
+                    <div class="container-6">
+                         <h1>Sərbəst işçi xidmətləri <span>barmaqlarınızın ucunda</span></h1>
+                         <button class="registerBtn">CareerAz-a Qoşulun</button>
+                    </div>
                </div>
           </section>
+          <footer>
+               <div class="container">
+                    <div class="left-side">
+                         <div class="logo-box">
+                              <img src="/assets/svg/logo.svg">
+                         </div>
 
+                         <p>© CareerAz International Ltd. 2025</p>
+
+                    </div>
+                    <div class="right-side">
+                         <div class="sosial-media">
+                              <ul class="sosial-links">
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                   </li>
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                   </li>
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+          </footer>
      </div>
 
      <script src="/JavaScript/utils.js"></script>
@@ -613,7 +559,6 @@
      <script src="/JavaScript/loginPageRequest.js"></script>
      <script src="/JavaScript/dataRequestHeader.js"></script>
      <script src="/JavaScript/loginCheck.js"></script>
-     <script src="/JavaScript/switchLang.js"></script>
      <script src="/JavaScript/sectionBanner.js"></script>
      <script src="/JavaScript/sectionContent.js"></script>
      <script src="/JavaScript/finally.js"></script>

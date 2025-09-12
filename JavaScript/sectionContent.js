@@ -58,3 +58,6 @@ $on(prev, "click", function (e) {
      $(".content-section .container-2 .cards.parent").scrollBy({ left: -step, behavior: "smooth" });
      console.log(e);
 })
+
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getData()); 

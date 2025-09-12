@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="stylesheet" href="/CSS/header.css">
+     <link rel="stylesheet" href="/CSS/root.css">
+     <link rel="stylesheet" href="/CSS/global.css">
+     <link rel="stylesheet" href="/CSS/setjob.css">
+     <link rel="stylesheet" href="/CSS/footer.css">
+     <title>Career AZ</title>
+
+</head>
+
+<body>
+     <div class="layout">
+          <header class="flex w-100 column-flex">
+               <div class="top-container flex w-100">
+
+                    <div class="logo-box-1 flex">
+                         <a href="/HTML/index.html" class="flex"><img src="/assets/svg/logo.svg"></a>
+                    </div>
+
+          </header>
+          <section class="set-job">
+               <div class="container">
+
+                    <div class="left-side">
+                         <div class="header">
+                              <h2>Elan yerləşdir</h2>
+                              <button class="cv-set __dark-btn-b1">CV paylaş</button>
+                         </div>
+                         <div class="form">
+
+                              <div>
+                                   <label for="select-categories">Kateqoriya seç</label>
+                                   <select id="select-categories">
+                                        <option value="none" selected>-Kateqoriya seç-</option>
+
+                                   </select>
+                              </div>
+                              <div>
+                                   <label for="select-jobs">iş seç</label>
+                                   <select id="select-jobs">
+                                        <option value="none" selected>-iş seç-</option>
+                                   </select>
+                              </div>
+                              <div class="description">
+                                   <label for="description-el">açıqlama</label>
+                                   <textarea id="description-el" cols="30" rows="10"></textarea>
+                              </div>
+                              <div>
+                                   <label for="salary-elmin">Maaş (AZN)</label>
+                                   <div class="f-row">
+                                        <input type="number" id="salary-elmin" placeholder="min">
+                                        <input type="number" id="salary-elmax" placeholder="max">
+                                   </div>
+                              </div>
+                              <div>
+                                   <label for="phone-el">Əlaqə nömrəsi</label>
+                                   <div class="f-row">
+                                        <input type="text" id="phone-el" maxlength="13"
+                                             
+                                             placeholder="0XX XXX XX XX" />
+                                   </div>
+                              </div>
+                              <div id="wrongFa" >
+                                   <p></p>
+                              </div>
+                              <div>
+                                   <button class="__dark-btn-b1" id="set_jAdd">Yerləşdir</button>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </section>
+          <footer>
+               <div class="container">
+                    <div class="left-side">
+                         <div class="logo-box">
+                              <img src="/assets/svg/logo.svg">
+                         </div>
+
+                         <p>© CareerAz International Ltd. 2025</p>
+
+                    </div>
+                    <div class="right-side">
+                         <div class="sosial-media">
+                              <ul class="sosial-links">
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                   </li>
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                   </li>
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+          </footer>
+     </div>
+     <script src="/JavaScript/utils.js"></script>
+     <script src="/JavaScript/set1.js"></script>
+
+</body>
+
+</html>

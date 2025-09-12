@@ -2,17 +2,32 @@
      header .top-container {
           padding: 0px 16px;
      }
+     .layout footer .container{
+          padding: 32px 16px;
+     }
      .layout section.content-section .container{
           padding: 32px 16px;
      }
      .layout .content-section .container .container-2{
-          button.control{
-               display: none;
+          button#next{
+               right: 1rem !important;
+          }
+          button#prev{
+               left: 1rem !important;
           }
           .cards.parent{
                overflow-x: scroll;
+               .card{
+                    scroll-snap-align: center; 
+               }
           }
      }
+     button#next{
+               right: 50px !important;
+          }
+          button#prev{
+               left: 3rem !important;
+          }
      #change_lang {
           display: none;
      }
@@ -33,7 +48,9 @@
                }
           }
      }
-
+     .layout .banner-us .container {
+          padding: 32px 16px;
+     }
      section.banner .contents {
           padding: 8% 32px 32px !important;
 
@@ -45,6 +62,7 @@
      header .top-container nav li.dr ul.dropdown-content.explore {
           left: -40px;
      }
+     
 }
 
 @media (max-width: 1024px) {
@@ -160,7 +178,16 @@
                aspect-ratio: 1/0.9;
           }
      }
+     .layout .content-section .container-3 .pro-content .img-box {
+          display: none ;
+     }
+     .layout .content-section .container .container-2{
+          button.control{
+               display: none;
+          }
+          
 
+     }
 }
 
 @media (max-width: 570px) {
@@ -218,6 +245,24 @@
                .icon{
                     aspect-ratio: 1/0.6;
                }
+          }
+     }
+     .layout .content-section .container-4 .items{
+          flex-direction: column;
+     } 
+     .layout footer .container {
+          flex-direction: column;
+          .left-side{
+               flex-direction: column;
+               gap: 20px;
+               p{
+                    font-size: 14px;
+                    opacity: 0.6;
+                    margin: 0;
+               }
+          }
+          ul.sosial-links {
+               justify-content: center;
           }
      }
 }

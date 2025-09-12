@@ -7,9 +7,8 @@ const getJobs = async () => {
           console.error(err);
      }
 };
-$on(document,"DOMContentLoaded", getJobs )
-window.allFetches = window.allFetches ? window.allFetches : [];
-window.allFetches.push(getJobs); 
+
+
 const loadSidebarCategories = (data) => {
      const collapseWrapperUl = $(".wrapper-collapse ul");
      data[0].jobsCategories.categories.forEach((categorie) => {
@@ -22,3 +21,6 @@ const loadSidebarCategories = (data) => {
                `;
      })
 }
+$on(document,"DOMContentLoaded", getJobs )
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getJobs); 

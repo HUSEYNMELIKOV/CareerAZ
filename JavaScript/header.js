@@ -46,7 +46,6 @@ $on(headerOpenDropDown[1], "click", function () {
      $cc(headerDropDownContent[0], "open_window", "remove");
      $cc(headerDropDownContent[1], "open_window", "toggle");
      $cc(headerOpenDropDown[1].querySelector("i"), "isToggle", "toggle");
-
 })
 $on(headerOpenBurgerBtn, "click", function () {
      const sidebarOverlay = $(".sidebar-overlay");

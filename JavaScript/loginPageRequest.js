@@ -23,22 +23,26 @@ const getData = async () => {
 };
 
 $on(document, "DOMContentLoaded", getData);
-window.allFetches = window.allFetches ? window.allFetches : [];
-window.allFetches.push(getData()); 
-$on($("header .loginBtn"), "click", async function () {
-     if (!state.chackBeforeClick) await getData();
-     loadPageText("login");
-     state.current = "login";
-     openLPoverlay();
-});
 
-$on($("header .registerBtn"), "click", async function () {
-     if (!state.chackBeforeClick) await getData();
-     loadPageText("register");
-     state.current = "register";
-     openLPoverlay();
-});
 
+
+$(".loginBtn", true).forEach(btn => {
+     $on(btn, "click", async function () {
+          if (!state.chackBeforeClick) await getData();
+          loadPageText("login");
+          state.current = "login";
+          openLPoverlay();
+     })
+})
+
+$(".registerBtn", true).forEach(btn => {
+     $on(btn, "click", async function () {
+          if (!state.chackBeforeClick) await getData();
+          loadPageText("register");
+          state.current = "register";
+          openLPoverlay();
+     })
+})
 closePage.forEach(button => {
      $on(button, "click", () => closeLoginPage());
 });
@@ -112,3 +116,5 @@ $on(p_inWithXpage[1].parentElement, "click", () => {
      state.current === "login" ? loadLoginPage() : null;
      state.current === "register" ? loadRegisterPage() : null;
 });
+window.allFetches = window.allFetches ? window.allFetches : [];
+window.allFetches.push(getData()); 

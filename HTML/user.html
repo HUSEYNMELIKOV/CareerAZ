@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+     <link rel="stylesheet" href="/CSS/header.css">
+     <link rel="stylesheet" href="/CSS/userHeader.css">
+     <link rel="stylesheet" href="/CSS/userSection.css">
+     <link rel="stylesheet" href="/CSS/root.css">
+     <link rel="stylesheet" href="/CSS/responsive.css">
+     <link rel="stylesheet" href="/CSS/global.css">
+     <link rel="stylesheet" href="/CSS/switchLang.css">
+     <link rel="stylesheet" href="/CSS/footer.css">
+     <title>CareerAz / Profile</title>
+</head>
+
+<body>
+     <div class="layout">
+
+          <div class="loader-container">
+               <div class="loader"></div>
+               <script>
+                    document.querySelector("html").classList.add("toggle");
+                    document.querySelector(".loader-container").classList.add("open");
+               </script>
+          </div>
+          <div class="sidebar-overlay w-100">
+               <div class="sidebar flex" id="sidebar">
+                    <div class="sidebar-header w-100">
+                         <ul class="pp">
+                              
+                         </ul>
+                    </div>
+                    <div class="sidebar-menu">
+                         <ul class="menu-selections">
+                              <li>
+                                   <button class="categories wrapper flex w-100">
+                                        <span>Kateqoriyalara bax</span><i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul></ul>
+                                   </div>
+                              </li>
+                              <li>
+                                   <button class="Explore wrapper flex w-100">
+                                        <span>Kəşf et</span><i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul>
+                                             <a href="setjob.html" style="text-decoration: none;" class="explore-selections listelement loginBtn">
+                                                  <span>Elan yerləşdir</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </a>
+                                             <a class="explore-selections listelement loginBtn">
+                                                  <span>Veb Səhifədə mövcud elanlara baxın</span>
+                                                  <i class="fa-solid fa-arrow-right"></i>
+                                             </a>
+                                        </ul>
+                                   </div>
+                              </li>
+                              <li>
+                                   <button class="Pro wrapper flex w-100">
+                                        <span>Pro</span><i class="fa-solid fa-angle-down"></i>
+                                   </button>
+                                   <div class="wrapper-collapse">
+                                        <ul>
+                                             <li>
+                                                  <button class="pro-selections listelement">
+                                                       <span>Mən işçi axtarıram</span>
+                                                  </button>
+                                             </li>
+                                             <li>
+                                                  <button class="pro-selections listelement">
+                                                       <span>Mən pro xidmətlər təklif etmək istəyirəm</span>
+                                                  </button>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </li>
+                              <li><span class="subheader">Ümumi</span></li>
+                              <li><a href="#" class="home link">Ana Səhifə</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <div class="switchLang-overlay w-100">
+               <div class="container">
+                    <div class="header flex">
+                         <h1>Select your preferences</h1>
+                         <button class="close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="screen">
+
+                         <ul class="tab flex">
+                              <li><button class="lang st active">Language</button></li>
+                              <li><button class="currency st">Currency</button></li>
+                         </ul>
+                         <div class="overflow">
+                              <ul class="list-lang list open">
+                                   <li>
+                                        <button class="option-lang option" value="az">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="lang name">Azərbaycan</span>
+                                             </div>
+                                        </button>
+                                   </li>
+                                   <li>
+                                        <button class="option-lang option" value="en">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="lang name">English</span>
+                                             </div>
+                                        </button>
+                                   </li>
+                              </ul>
+                              <ul class="list-currency list">
+                                   <li>
+                                        <button class="option-currency option">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="currency-name">United States Dollar</span>
+                                                  <span class="currency-symbol">USD $</span>
+                                             </div>
+                                        </button>
+                                   </li>
+                                   <li>
+                                        <button class="option-currency option">
+                                             <i class="fa-solid fa-check"></i>
+                                             <div class="text">
+                                                  <span class="currency-name">Azərbaycan manatı</span>
+                                                  <span class="currency-symbol">AZN ₼</span>
+                                             </div>
+                                        </button>
+                                   </li>
+                              </ul>
+                         </div>
+
+                    </div>
+               </div>
+          </div>
+          <header class="flex w-100 column-flex">
+               <div class="top-container flex w-100">
+                    <div class="burger">
+                         <button class="burgerBtn" id="burgerBtn"><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                    <div class="logo-box-1 flex">
+                         <a href="/HTML/index.html" class="flex"><img src="/assets/svg/logo.svg"></a>
+                    </div>
+                    <div class="input-search flex ">
+                         <div class="for-observer flex">
+                              <input type="text" placeholder="What service are you looking for today?" id="search_input"
+                                   name="search_input">
+                              <button id="clear_input_value"><i class="fa-solid fa-xmark flex flex-center"></i></button>
+                              <div class="search-btn-box">
+                                   <button class="search __dark-btn-b1">
+                                        <i class="fa-solid fa-search"></i>
+                                   </button>
+                              </div>
+                         </div>
+
+                    </div>
+                    <nav class="flex">
+                         <li class="nav_li getpro">
+                              <a href="#">Pro alın</a>
+                         </li>
+                         <li id="explore-dropdown" class="dr nav_li">
+                              <button class="hovGray explore_btn" id="explore">Explore <i
+                                        class="fa-solid fa-chevron-down"></i></button>
+                              <ul class="dropdown-content column-flex flex explore">
+                                   <li class="link">
+                                        <a href="setjob.html">
+                                             <h3>Elan yerləşdir</h3>
+                                             <p>İş axtarın və müraciət edin və ya işçi tapmaq üçün vakansiya
+                                                  yerləşdirin.</p>
+                                        </a>
+                                   </li>
+                                   <li class="link">
+                                        <a href="#">
+                                             <h3>Elanlar</h3>
+                                             <p>Veb səyfədə mövcud Elanlara baxın.</p>
+                                        </a>
+                                   </li>
+                              </ul>
+                         </li>
+
+                         <li class="nav_li notice-li">
+                              <button class="notice hovGreen">
+                                   <i class="fa-solid fa-bell"></i>
+                              </button>
+                         </li>
+
+                         <li class="nav_li pp">
+                              <button class="profile-btn">
+                                   <div class="profile">
+                                        <img src="/assets/images/userDefault.png">
+                                   </div>
+                              </button>
+                              <ul class="pp-dropdown">
+                                   <li class="pp-list">
+                                        <button class="Job-posting">
+                                             Elanlarım
+                                             <i class="fa-solid fa-paste"></i>
+                                        </button>
+                                   </li>
+                                   <li class="pp-list">
+                                        <button class="edit-profile">
+                                             Profili redaktə et
+                                             <i class="fa-solid fa-user-pen"></i>
+                                        </button>
+                                   </li>
+                                   <li class="pp-list ">
+                                        <button class="settings ">
+                                             Parametrlər
+                                             <i class="fa-solid fa-gear"></i>
+                                        </button>
+                                   </li>
+                                   <li class="pp-list">
+                                        <button class="logout-btn">
+                                             Çışıx
+                                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                        </button>
+                                   </li>
+                              </ul>
+                         </li>
+                    </nav>
+               </div>
+          </header>
+          <section class="banner-us">
+               <div class="container">
+                    <div class="container-1 cont open">
+                         <div class="header-bn">
+                              <h1>
+                                   CareerAz ilə iş tapmaq sadə və asan.
+                              </h1>
+                         </div>
+                         <div class="head-content">
+                              
+                         </div>
+                         <div class="cards">
+                              
+                              <div class="last-loaded-1">
+                                   <h1>Son Yuklənən iş elanları</h1>
+                              </div>
+                              <div class="card-list" id="last-adv">
+                                 
+
+                                 
+                              </div>
+                         </div>
+
+                    </div>
+                    <div class="container-2 cont">
+                         <div class="header">
+                              <h1>İş Elanlarım</h1>
+                         </div>
+                         <div class="jobs">
+                              
+                              <ul class="cards">
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="container-3 cont">
+                         <div class="header">
+                              <h1>CV lərim</h1>
+                         </div>
+                         <div class="jobs">
+                              <ul class="cards">
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                                   <li class="card">
+
+                                        <div class="job">
+                                             <h1>Web Developer</h1>
+                                        </div>
+                                        <div class="salary">
+                                             <span>Maaş: 500 - 1000 AZN </span>
+                                        </div>
+                                        <div class="description">
+                                             <span>Açıqlama:</span>
+                                             <p>
+                                                  Lorem ipsum dolor sit amet.
+                                             </p>
+                                        </div>
+                                        <div class="link-btn">
+                                             <button class="edit-addv __dark-btn-b1" >düzəliş et</button>
+                                             <a href="#">Ətraflı...</a>
+                                             
+                                        </div>
+
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <footer>
+               <div class="container">
+                    <div class="left-side">
+                         <div class="logo-box">
+                              <img src="/assets/svg/logo.svg">
+                         </div>
+
+                         <p>© CareerAz International Ltd. 2025</p>
+
+                    </div>
+                    <div class="right-side">
+                         <div class="sosial-media">
+                              <ul class="sosial-links">
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                   </li>
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                   </li>
+                                   <li>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+          </footer>
+     </div>
+
+     <script src="/JavaScript/utils.js"></script>
+     <script src="/JavaScript/sidebar.js"></script>
+     <script src="/JavaScript/userHeader.js"></script>
+     <script src="/JavaScript/userSection.js"></script>
+     <script src="/JavaScript/dataRequestHeader.js"></script>
+     <script src="/JavaScript/finally.js"></script>
+</body>
+
+</html>
