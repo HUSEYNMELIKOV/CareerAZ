@@ -1,0 +1,159 @@
+.pp-edit {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.6);
+     display: none;
+     justify-content: center;
+     align-items: center;
+     z-index: 999;
+}
+
+.pp-edit .popup-card {
+     background: #fff;
+     border-radius: 16px;
+     padding: 25px;
+     width: 100%;
+     max-width: 420px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+     animation: fadeIn 0.3s ease;
+}
+
+.pp-edit .popup-card h2 {
+     margin-bottom: 20px;
+     text-align: center;
+     color: #333;
+     font-size: 22px;
+}
+
+.pp-edit .popup-card label {
+     display: block;
+     font-weight: 600;
+     margin-bottom: 6px;
+     color: #444;
+}
+
+.pp-edit .popup-card input[type="text"] {
+     width: 100%;
+     padding: 10px 12px;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     font-size: 15px;
+     margin-bottom: 15px;
+     outline: none;
+     transition: border 0.2s ease;
+}
+
+.pp-edit .popup-card input[type="text"]:focus {
+     border-color: #007bff;
+}
+
+.pp-edit .popup-card input[disabled] {
+     background: #f5f5f5;
+     color: #777;
+     cursor: not-allowed;
+}
+
+.pp-edit .photo-wrapper {
+     display: inline-block;
+     position: relative;
+     cursor: pointer;
+}
+
+.pp-edit .photo-wrapper img {
+     width: 110px;
+     height: 110px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 3px solid #ddd;
+     transition: transform 0.3s ease;
+}
+
+.pp-edit .photo-wrapper:hover img {
+     transform: scale(1.05);
+}
+
+.pp-edit .camera-icon {
+     position: absolute;
+     bottom: 8px;
+     right: 8px;
+     background: #007bff;
+     color: #fff;
+     padding: 6px;
+     border-radius: 50%;
+     font-size: 14px;
+     display: none;
+}
+
+.pp-edit .photo-wrapper:hover .camera-icon {
+     display: block;
+}
+
+.pp-edit .pp {
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+.pp-edit .pp .hint {
+     font-size: 14px;
+     color: #666;
+     margin-top: 6px;
+}
+
+.pp-edit .submit {
+     display: flex;
+     justify-content: space-between;
+     gap: 10px;
+}
+
+.pp-edit .btn {
+     flex: 1;
+     padding: 12px;
+     border: none;
+     border-radius: 8px;
+     font-size: 15px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.2s ease;
+}
+
+.pp-edit .btn.cancel {
+     background: #f0f0f0;
+     color: #333;
+}
+
+.pp-edit .btn.cancel:hover {
+     background: #ddd;
+}
+
+.pp-edit .btn.save {
+     background: #007bff;
+     color: #fff;
+}
+
+.pp-edit .btn.save:hover {
+     background: #0056b3;
+}
+
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+          transform: scale(0.9);
+     }
+
+     to {
+          opacity: 1;
+          transform: scale(1);
+     }
+}
+
+@media (max-width: 480px) {
+     .pp-edit .popup-card {
+          max-width: 95%;
+          padding: 20px;
+     }
+
+     .pp-edit .photo-wrapper img {
+          width: 90px;
+          height: 90px;
+     }
+}

@@ -10,7 +10,7 @@ const getCategoriesName = async () => {
 };
 $on(document, "DOMContentLoaded", getCategoriesName);
 class jobAd {
-     constructor(categories, job, description, salary1, salary2, date, userName) {
+     constructor(categories, job, description, salary1, salary2, date, userName, phoneNumber) {
           this.categories = categories;
           this.job = job;
           this.description = description;
@@ -18,6 +18,7 @@ class jobAd {
           this.salary2 = salary2;
           this.date = date;
           this.userName = userName;
+          this.phoneNumber = phoneNumber;
           this.id = Date.now();
      }
 }
@@ -119,7 +120,7 @@ $on(done, "click", function () {
      }
      const now = new Date().toISOString(); 
      let currentUserName = JSON.parse(localStorage.getItem("user")).name;
-     let setLoacal = new jobAd(formData.categories, formData.job, textarea.value, salaryMin.value, salaryMax.value,now,currentUserName,);
+     let setLoacal = new jobAd(formData.categories, formData.job, textarea.value, salaryMin.value, salaryMax.value,now,currentUserName,phone.value);
      console.log(setLoacal);
      let users = JSON.parse(localStorage.getItem("UsersData"));
      let currentuserName = JSON.parse(localStorage.getItem("user")).name;

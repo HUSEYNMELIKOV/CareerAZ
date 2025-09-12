@@ -8,7 +8,7 @@ const getSectionCategories = async () => {
           console.error(err);
      }
 };
-$on(document, "DOMContentLoaded", getSectionCategories) 
+$on(document, "DOMContentLoaded", getSectionCategories) ;
 
 
 const getDataSection_1 = (data) => {

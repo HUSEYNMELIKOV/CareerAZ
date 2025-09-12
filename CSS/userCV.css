@@ -1,0 +1,247 @@
+section {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+}
+
+section .container {
+     display: flex;
+     width: 100%;
+     padding: 32px;
+     max-width: 1440px;
+     flex-direction: column;
+}
+
+section .container {
+
+     /* Header container */
+     .header {
+          display: flex;
+          flex-wrap: wrap;
+          /* kiçik ekranlarda alt sıraya düşsün */
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          padding: 1rem 1.5rem;
+          background-color: #f8fafc;
+          /* yüngül fon */
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+     }
+
+     /* Başlıq */
+     .header h1 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin: 0;
+          color: #0f172a;
+          flex: 1 1 auto;
+          /* lazım olduqda böyüyə bilər */
+          min-width: 180px;
+     }
+
+     /* Filter və Add type bölmələri */
+     .filter,
+     .addv-type {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+     }
+
+     /* Filter text */
+     .filter p {
+          margin: 0;
+          font-size: 0.9rem;
+          color: #475569;
+     }
+
+     /* Select stili */
+     .header select {
+          appearance: none;
+          /* default arrow silinir */
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          padding: 6px 12px;
+          border-radius: 8px;
+          border: 1px solid #cbd5e1;
+          background-color: #ffffff;
+          color: #0f172a;
+          font-size: 0.9rem;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          min-width: 150px;
+          background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7H0z%22%20fill%3D%22%23475169%22/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right 10px center;
+          background-size: 10px 7px;
+     }
+
+     /* Hover və focus */
+     .header select:hover,
+     .header select:focus {
+          border-color: #0ea5e9;
+          box-shadow: 0 0 5px rgba(14, 165, 233, 0.3);
+          outline: none;
+     }
+
+     /* Responsive */
+     @media (max-width: 650px) {
+          .header {
+               flex-direction: column;
+               align-items: flex-start;
+          }
+
+          .filter,
+          .addv-type {
+               width: 100%;
+               justify-content: flex-start;
+          }
+
+          .header select {
+               width: 100%;
+          }
+
+          .header h1 {
+               text-align: left;
+          }
+     }
+
+}
+
+/* Grid container */
+.cards {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     /* həmişə 2 sütun */
+     gap: 1.5rem;
+     /* kartlar arası məsafə */
+     padding: 1rem;
+     box-sizing: border-box;
+}
+
+/* Kartın özü (a element) */
+.card {
+     display: block;
+     /* a element block kimi */
+     text-decoration: none;
+     color: inherit;
+     background: #fff;
+     border-radius: 14px;
+     padding: 1.25rem;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+     border: 1px solid rgba(0, 0, 0, 0.08);
+     transition: transform .2s ease, box-shadow .2s ease;
+     height: 260px;
+     width: 100%;
+}
+
+.card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* UL içindəki LI-lər */
+.card ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 100%;
+     gap: 1rem;
+}
+
+/* pp-d: profil şəkli və ad */
+.pp-d {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+}
+
+.pp-d img {
+     width: 70px;
+     height: 70px;
+     object-fit: cover;
+     border-radius: 50%;
+     flex-shrink: 0;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pp-d h2 {
+     font-size: 1.1rem;
+     font-weight: 600;
+     margin: 0;
+     line-height: 1.2;
+}
+
+/* İş adı + kateqoriya */
+.job-content h3 {
+     font-size: 0.95rem;
+     margin: 0 0 6px 0;
+     font-weight: 600;
+     color: #0f172a;
+}
+
+.job-content .category {
+     display: inline-block;
+     font-size: 0.8rem;
+     padding: 4px 10px;
+     border-radius: 6px;
+     background: rgba(14, 165, 233, 0.08);
+     color: #0ea5e9;
+     border: 1px solid rgba(14, 165, 233, 0.2);
+     text-decoration: none;
+     transition: background .2s ease;
+}
+
+.job-content .category:hover {
+     background: rgba(14, 165, 233, 0.15);
+}
+
+/* Description paragraph */
+
+.description p {
+    width: max-content;
+}
+
+/* Salary + date */
+.salary-date {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 0.85rem;
+     color: #0f172a;
+     font-weight: 500;
+     /* həmişə kartın aşağısında dayansın */
+}
+
+.salary-date span:first-child {
+     font-weight: 700;
+     color: #0ea5e9;
+}
+
+/* Responsive: telefonlar üçün 1 sütun */
+@media (max-width: 600px) {
+     .cards {
+          grid-template-columns: 1fr;
+     }
+
+     .pp-d img {
+          width: 60px;
+          height: 60px;
+     }
+
+     .pp-d h2 {
+          font-size: 1rem;
+     }
+
+     .job-content h3 {
+          font-size: 0.9rem;
+     }
+
+     .job-content .category {
+          font-size: 0.75rem;
+          padding: 3px 8px;
+     }
+}

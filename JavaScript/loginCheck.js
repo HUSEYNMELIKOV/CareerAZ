@@ -24,6 +24,7 @@ class User {
           this.password = password;
           this.pro = false;
           this.status = null;
+          this.pImg = "/assets/images/userDefault.png";
           this.JobAd = [];
           this.cv = [];
      }

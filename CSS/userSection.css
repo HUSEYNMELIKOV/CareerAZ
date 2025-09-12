@@ -120,9 +120,11 @@ section.banner-us .container {
 
      }
 }
-.banner-us #last-cv{
+.cards .card-list#last-cv{
+     display: grid;
      grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(1, 310px);
+     grid-template-rows: repeat(1, 360px);
+     gap: 12px;
      .card-cv{
           height: 100%;
      }
@@ -164,9 +166,9 @@ section.banner-us .container {
                margin-bottom: 2px;
                overflow: hidden;
                height: 64px;
-               text-align: center;
                width: 340px;
                word-wrap: break-word;
+               text-align: center;
           }
           .description::after{
                position: absolute;
@@ -195,9 +197,13 @@ section.banner-us .container {
           position: relative;
           z-index: 1;
           overflow: hidden;
+          text-decoration: none;
      }
      a:hover .profile img{
           scale: 1.1;
+     }
+     a:hover{
+          transform: translateY(-3px);
      }
      
      a::before{
@@ -210,10 +216,9 @@ section.banner-us .container {
 
      }
 }
-.cards .card-list {
+.cards .card-list#last-adv {
      display: grid;
      grid-template-columns: repeat(4, 1fr);
-     grid-template-rows: repeat(1, 190px);
      gap: 12px;
 
      a {
@@ -297,7 +302,7 @@ section.banner-us .container {
           display: flex;
           justify-content: space-between;
           align-items: end;
-
+          flex-wrap: wrap;
           span {
                color: var(--mqvym51n);
                font-size: 12px;
@@ -307,11 +312,11 @@ section.banner-us .container {
 }
 
 @media (max-width: 1024px) {
-     .cards .card-list {
+     .cards .card-list#last-adv {
           grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 190px);
-
      }
+     
+     
 }
 
 @media (max-width: 768px) {
@@ -324,12 +329,15 @@ section.banner-us .container {
           }
      }
 
-     .cards .card-list {
+     .cards .card-list#last-adv {
           grid-template-columns: repeat(1, 1fr);
-          grid-template-rows: repeat(4, 190px);
 
      }
-
+     .cards .card-list#last-cv{
+          grid-template-columns: repeat(1,1fr);
+          grid-template-rows: repeat(3, 320px);
+          gap: 20px;
+     }
      .card {
           padding: 1rem;
           gap: 0.75rem;

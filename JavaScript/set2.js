@@ -9,13 +9,14 @@ const getCategoriesName1 = async () => {
 };
 $on(document, "DOMContentLoaded", getCategoriesName1);
 class cv {
-     constructor(categories, job, description, salary, date, userName) {
+     constructor(categories, job, description, salary, date, userName, phoneNumber) {
           this.categories = categories;
           this.job = job;
           this.description = description;
           this.salary = salary;
           this.date = date;
           this.userName = userName;
+          this.phoneNumber = phoneNumber;
           this.id = Date.now();
      }
 }
@@ -120,7 +121,7 @@ $on(doneCV, "click", function () {
      }
      const now = new Date().toISOString(); 
      let currentUserName = JSON.parse(localStorage.getItem("user")).name;
-     let setLoacal = new cv(formDataCV.categories, formDataCV.job, textareaCV.value, salaryCV.value ,now,currentUserName,);
+     let setLoacal = new cv(formDataCV.categories, formDataCV.job, textareaCV.value, salaryCV.value ,now,currentUserName,phoneCV.value);
      console.log(setLoacal)
      let users = JSON.parse(localStorage.getItem("UsersData"));
      let currentuserName = JSON.parse(localStorage.getItem("user")).name;

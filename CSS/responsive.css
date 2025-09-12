@@ -40,7 +40,6 @@
           padding-left: 6px;
 
           li {
-
                button:not(.dropdown-content button),
                a:not(.dropdown-content a) {
                     padding: 6px 14px;

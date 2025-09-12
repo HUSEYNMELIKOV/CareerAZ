@@ -41,22 +41,20 @@ function formatAzDate(dateStr) {
 }
 
 for (let i = 0; i < 4; i++) {
-     /* if (allAdv.length < 4) break; */
+     if (allAdv.length < 4) break;
      const formattedDate1 = formatAzDate(allAdv[i].date);
-
+     
      lastJobsInSection.innerHTML += `
      <a href="#" data-id="${allAdv[i].id}">
      <div class="card">
           <div class="poster">
                <h3>Paylaşan: ${allAdv[i].userName}</h3>
-               <img src="/assets/images/userDefault.png" width="40px">
+               <img src="${allAdv[i].pImg}" width="40px">
           </div>
           <div class="header">
                <h1>${allAdv[i].job}</h1>
           </div>
-               <div class="description">
-               <p>${allAdv[i].description}</p>
-          </div>
+               
           <div class="salary date">
                <p>${allAdv[i].salary1} - ${allAdv[i].salary2} AZN</p>
                <span>${formattedDate1}</span>
@@ -67,15 +65,21 @@ for (let i = 0; i < 4; i++) {
    `
 }
 
-for (let i = 0; i < 4; i++) {
-     /* if (allAdv.length < 4) break; */
+for (let i = 0; i < 3; i++) {
+     if (allCV.length < 3) break;
      const formattedDate2 = formatAzDate(allCV[i].date);
-
+     const users = JSON.parse(localStorage.getItem("UsersData"));
+     let userProfile = null;
+     users.forEach(user => {
+          if(user.name == allCV[i].userName){
+               userProfile = user.pImg;
+          }
+     })
      lastCVInSection.innerHTML += `
      <a href="#" data-id="${allCV[i].id}">
      <div class="card-cv">
      <div class="profile">
-          <img src="/assets/images/userDefault.png" width="90px">
+          <img src="${userProfile}" width="90px">
      </div>
      <div class="content">
           <div class="name">
@@ -95,4 +99,9 @@ for (let i = 0; i < 4; i++) {
 
 
 }
+
+
+
+/* edit profile btn */
+
 
