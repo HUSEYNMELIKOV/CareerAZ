@@ -17,10 +17,25 @@ footer {
 }
 
 section.banner-us .container {
-     background: #008f13;
-     background: linear-gradient(194deg, rgba(0, 143, 19, 1) 0%, rgba(9, 61, 16, 1) 100%);
+     
+     background: linear-gradient(194deg, rgb(0, 0, 0) 0%, rgb(17, 148, 17) 100%);
+     background-size: 400% 400%;
+     animation: gradientAnim 20s ease-in-out infinite;
+    
+
 }
 
+@keyframes gradientAnim {
+     0% {
+       background-position: 0% 50%;
+     }
+     50% {
+       background-position: 100% 50%;
+     }
+     100% {
+       background-position: 0% 50%;
+     }
+   }
 .banner-us .container-1 {
      .header-bn {
           padding: 64px 0px;
@@ -131,26 +146,28 @@ section.banner-us .container {
      .profile{
           width: 100%;
           background-color: var(--mqvym51c);
-          height: 40%;
+          height: 60%;
           display: flex;
           justify-content: center;
           align-items: center;
-          border-radius: 0px 0px 40px 40px;
+          border-radius: 0px 0px 60px 60px;
           img{
                border-radius: 50%;
-               width: 70px;
+               width: 100%;
+               max-width: 150px;
                transition: 0.3s ease scale;
           }
      }
      .content{
           background-color: #fff;
-          height: 60%;
-          border-radius: 40px 40px 0px 0px ;
-          padding: 12px;
+          height: 40%;
+          border-radius: 60px 60px 0px 0px ;
+          padding: 12px 22px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           gap: 2px;
+          flex: 0 0 auto;
           .name{
                text-align: center;
                color: var(--mqvym51o);
@@ -165,7 +182,7 @@ section.banner-us .container {
                line-height: calc(100% + 2px);
                margin-bottom: 2px;
                overflow: hidden;
-               height: 64px;
+               height: 34px;
                width: 340px;
                word-wrap: break-word;
                text-align: center;
@@ -183,8 +200,8 @@ section.banner-us .container {
           .salary-date{
                display: flex;
                justify-content: space-between;
-               color: var(--mqvym51c);
-               
+               color: var(--mqvym51m);
+               flex-wrap: wrap;
                font-size: 16px;
                span{
                     font-weight: 700;
@@ -273,7 +290,12 @@ section.banner-us .container {
           display: flex;
           justify-content: space-between;
           align-items: center;
-
+          img{
+               width: 70px;
+               height: 70px;
+               border-radius: 50%;
+               object-fit: cover;
+          }
           h3 {
                color: var(--mqvym51m);
           }

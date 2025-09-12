@@ -3,8 +3,37 @@ $on(document, "DOMContentLoaded", () => {
      let user = JSON.parse(localStorage.getItem("user"));
      $id("p_img").src = user.pImg;
      $id("userPhotoImg").src = user.pImg;
+     $id("email_edit").value = user.email;
+     $id("edit-name").value = user.name;
 
+});
 
+$on($id("save-edit"), "click", function () {
+     let currentUserName = JSON.parse(localStorage.getItem("user"));
+     let users = JSON.parse(localStorage.getItem("UsersData"));
+     if ($id("edit-name").value.length < 5 ){
+          $id("wrongMsgUser").innerText = "Minimum simvol sayı 5 olmalıdır.";
+          return;
+     } 
+     let checkUserName = false;
+     users.forEach(user => {
+          if (user.name == $id("edit-name").value) {
+               $id("wrongMsgUser").innerText = "Bu istifadəçi adı artıq təyin olunub.";
+               checkUserName = true;
+          } 
+     })
+     if(!checkUserName){
+          users.forEach(user => {
+               if(user.name == currentUserName.name ) {
+                    user.name = $id("edit-name").value;
+                    (localStorage.setItem("user",JSON.stringify(user)));
+               }
+          });
+          localStorage.setItem("UsersData", JSON.stringify(users));
+          
+
+     }
+     
 })
 
 $on($("#explore"), "click", function (e) {
@@ -83,6 +112,9 @@ $on(fileEl, "change", () => {
                }
           })
      })
-})
+});
+
+
+
 
 

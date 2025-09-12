@@ -43,13 +43,19 @@ function formatAzDate(dateStr) {
 for (let i = 0; i < 4; i++) {
      if (allAdv.length < 4) break;
      const formattedDate1 = formatAzDate(allAdv[i].date);
-     
+     const users = JSON.parse(localStorage.getItem("UsersData"));
+     let userProfile = null;
+     users.forEach(user => {
+          if(user.name == allAdv[i].userName){
+               userProfile = user.pImg;
+          }
+     })
      lastJobsInSection.innerHTML += `
      <a href="#" data-id="${allAdv[i].id}">
      <div class="card">
           <div class="poster">
-               <h3>Paylaşan: ${allAdv[i].userName}</h3>
-               <img src="${allAdv[i].pImg}" width="40px">
+               <h3>${allAdv[i].userName}</h3>
+               <img src="${userProfile}" width="40px" >
           </div>
           <div class="header">
                <h1>${allAdv[i].job}</h1>

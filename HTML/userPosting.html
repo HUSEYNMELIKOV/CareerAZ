@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="/CSS/userHeader.css">
      <link rel="stylesheet" href="/CSS/userCV.css">
      <link rel="stylesheet" href="/CSS/root.css">
+     <link rel="stylesheet" href="/CSS/editUser.css">
      <link rel="stylesheet" href="/CSS/responsive.css">
      <link rel="stylesheet" href="/CSS/global.css">
      <link rel="stylesheet" href="/CSS/footer.css">
@@ -84,6 +85,37 @@
                               <li><span class="subheader">Ümumi</span></li>
                               <li><a href="#" class="home link">Ana Səhifə</a></li>
                          </ul>
+                    </div>
+               </div>
+          </div>
+          <div class="pp-edit">
+               <div class="popup-card">
+                    <h2>Profil Redaktəsi</h2>
+
+                    <div class="edit-name">
+                         <label for="edit-name">Adınızı dəyişin</label>
+                         <input type="text" placeholder="David Bell" id="edit-name">
+                    </div>
+
+                    <div class="edit-email">
+                         <label for="email_edit">Email</label>
+                         <input type="text" value="example@gmail.com" id="email_edit" disabled>
+                    </div>
+
+                    <div class="pp">
+                         <label for="setPhoto" class="photo-wrapper">
+                              <img src="/assets/images/userDefault.png" id="userPhotoImg">
+                              <span class="camera-icon">📷</span>
+                         </label>
+                         <input type="file" id="setPhoto" hidden>
+                         <p class="hint">Profil şəklini dəyiş</p>
+                    </div>
+                    <div id="wrongMsgUser" style="color: rgb(153, 25, 25); margin-bottom: 12px; font-size: 16px;">
+                         <p></p>
+                    </div>
+                    <div class="submit">
+                         <button class="btn cancel" onclick="closeEditUser()" >Geri</button>
+                         <button class="btn save" id="save-edit">Saxla</button>
                     </div>
                </div>
           </div>
@@ -178,7 +210,7 @@
           <section class="cv-section">
                <div class="container">
                     <div class="header">
-                         <h1>Yüklənən cv lər</h1>
+                         <h1>Bütün elanlar</h1>
                          <div class="filter">
                               <p>sırala</p>
                               <select id="filtrCV" class="filter">
@@ -187,7 +219,8 @@
                                    <option value="2">Son yüklənənlər</option>
                               </select>
                          </div>
-                         <div class="addv-type">
+                         <div class="addv-type filter">
+                              <p>Kateqoriya seç</p>
                               <select id="type" >
                                    <option value="cv" selected>İş axtaranlar</option>
                                    <option value="JobAd">İş Elanları</option>
