@@ -1,8 +1,10 @@
 .set-job {
      width: 100%;
      display: flex;
+     align-items: center;
      justify-content: center;
      background-color: var(--mqvym51a);
+     flex-direction: column;
 }
 
 .set-job .container {
@@ -10,7 +12,7 @@
      padding: 32px;
      width: 100%;
      max-width: 1440px;
-
+     
      .header {
           display: flex;
           justify-content: space-between;

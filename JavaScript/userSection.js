@@ -1,5 +1,8 @@
 let lastJobsInSection = $id("last-adv");
+let lastCVInSection = $id("last-cv");
+
 let allAdv = new Array();
+let allCV = new Array();
 let users = JSON.parse(localStorage.getItem("UsersData"));
 
 /* istifadecilerin paylasdigi is elanlarinin bir arraya toplanmasi ucun */
@@ -10,10 +13,17 @@ users.forEach(user => {
           })
      }
 });
-
+users.forEach(user => {
+     if (user.cv.length !== 0) {
+          user.cv.forEach(c => {
+               allCV.push(c);
+          });
+     }
+});
 // sonuncu yuklenen elanlari arrayin evveline atiriq
 
 allAdv.sort((a, b) => new Date(b.date) - new Date(a.date));
+allCV.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 // date formatinda Azərbaycan dilində
 const monthsAz = [
@@ -32,14 +42,14 @@ function formatAzDate(dateStr) {
 
 for (let i = 0; i < 4; i++) {
      /* if (allAdv.length < 4) break; */
-     const formattedDate = formatAzDate(allAdv[i].date);
+     const formattedDate1 = formatAzDate(allAdv[i].date);
+
      lastJobsInSection.innerHTML += `
-     <a href="#">
+     <a href="#" data-id="${allAdv[i].id}">
      <div class="card">
           <div class="poster">
                <h3>Paylaşan: ${allAdv[i].userName}</h3>
                <img src="/assets/images/userDefault.png" width="40px">
-               
           </div>
           <div class="header">
                <h1>${allAdv[i].job}</h1>
@@ -49,11 +59,40 @@ for (let i = 0; i < 4; i++) {
           </div>
           <div class="salary date">
                <p>${allAdv[i].salary1} - ${allAdv[i].salary2} AZN</p>
-               <span>${formattedDate}</span>
+               <span>${formattedDate1}</span>
           </div>
           
      </div>
      </a>
-     `
+   `
+}
+
+for (let i = 0; i < 4; i++) {
+     /* if (allAdv.length < 4) break; */
+     const formattedDate2 = formatAzDate(allCV[i].date);
+
+     lastCVInSection.innerHTML += `
+     <a href="#" data-id="${allCV[i].id}">
+     <div class="card-cv">
+     <div class="profile">
+          <img src="/assets/images/userDefault.png" width="90px">
+     </div>
+     <div class="content">
+          <div class="name">
+               <h1>${allCV[i].userName}</h1>
+          </div>
+          <div class="description">
+               <p>${allCV[i].description}</p>
+          </div>
+          <div class="salary-date">
+               <span>${allCV[i].salary} AZN</span>
+               <span>${formattedDate2}</span>
+          </div>
+     </div>
+</div>
+     </a>
+     `;
+
+
 }
 

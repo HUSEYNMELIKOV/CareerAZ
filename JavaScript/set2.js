@@ -1,82 +1,79 @@
-
-const getCategoriesName = async () => {
+const getCategoriesName1 = async () => {
      try {
           let response = await fetch("/Data/jobs.json");
           let data = await response.json();
-          setSelect(data[0].jobsCategories.categories)
+          setSelectcv(data[0].jobsCategories.categories)
      } catch (err) {
           console.error(err);
      }
 };
-$on(document, "DOMContentLoaded", getCategoriesName);
-class jobAd {
-     constructor(categories, job, description, salary1, salary2, date, userName) {
+$on(document, "DOMContentLoaded", getCategoriesName1);
+class cv {
+     constructor(categories, job, description, salary, date, userName) {
           this.categories = categories;
           this.job = job;
           this.description = description;
-          this.salary1 = salary1;
-          this.salary2 = salary2;
+          this.salary = salary;
           this.date = date;
           this.userName = userName;
           this.id = Date.now();
      }
 }
-let formData = {
+let formDataCV = {
      categories: null,
      job: null,
 }
-const setSelect = (data) => {
+const setSelectcv = (data) => {
      data.forEach(obj => {
-          $id("select-categories").innerHTML +=
+          $id("select-categories-cv").innerHTML +=
                `
                <option value="${obj.id}">${obj.name}</option>
           `;
      });
-     $on($id("select-categories"), "change", function () {
-          let options = $id("select-categories").querySelectorAll("option");
+     $on($id("select-categories-cv"), "change", function () {
+          let options = $id("select-categories-cv").querySelectorAll("option");
           options.forEach(option => {
                option.value == "none" ? option.remove() : null;
           });
           data.forEach(obj => {
-               obj.id == $id("select-categories").value ? formData.categories = obj.name : null;
+               obj.id == $id("select-categories-cv").value ? formDataCV.categories = obj.name : null;
           })
      })
-     $id("select-categories").addEventListener("change", function () {
+     $id("select-categories-cv").addEventListener("change", function () {
 
           data.forEach(obj => {
                if (obj.id == this.value) {
-                    let o = $id("select-jobs").querySelectorAll("option");
+                    let o = $id("select-jobs-cv").querySelectorAll("option");
                     o.forEach(option => {
                          option.value !== "none" ? option.remove() : null;
                     })
                     obj.jobs.forEach(job => {
-                         $id("select-jobs").innerHTML +=
+                         $id("select-jobs-cv").innerHTML +=
                               `
                               <option value="${job.name}">${job.name}</option>
                          `
                     })
                }
           })
-          $on($id("select-jobs"), "change", function () {
-               let options = $id("select-jobs").querySelectorAll("option");
+          $on($id("select-jobs-cv"), "change", function () {
+               let options = $id("select-jobs-cv").querySelectorAll("option");
                options.forEach(option => {
                     option.value == "none" ? option.remove() : null;
-                    option.value == $id("select-jobs").value ? formData.job = option.textContent : null;
+                    option.value == $id("select-jobs-cv").value ? formDataCV.job = option.textContent : null;
                });
 
           })
      });
 };
 
-let select1 = $id("select-categories");
-let select2 = $id("select-jobs");
-let textarea = $id("description-el");
-let salaryMin = $id("salary-elmin");
-let salaryMax = $id("salary-elmax");
-let phone = $id("phone-el")
-let done = $id("set_jAdd");
+let select1CV = $id("select-categories-cv");
+let select2CV = $id("select-jobs-cv");
+let textareaCV = $id("description-el-cv");
+let salaryCV = $id("salary-cv");
+let phoneCV = $id("phone-el-cv")
+let doneCV = $id("set_cv");
 
-$on(phone, "input", function () {
+$on(phoneCV, "input", function () {
      let digits = this.value.replace(/\D/g, "");
      digits = digits.substring(0, 12);
      let formatted = "";
@@ -87,45 +84,49 @@ $on(phone, "input", function () {
      this.value = formatted;
 })
 
-const wrongMSG = () => {
-     let p = $id("wrongFa").querySelector("p");
+const wrongMSGCV = () => {
+     let p = $id("wrongFa-cv").querySelector("p");
      p.innerText = "Zəhmət olmasa formu doldurun";
 }
 
-$on(done, "click", function () {
-     if (formData.categories == null) {
-          wrongMSG();
+$on(doneCV, "click", function () {
+     if (formDataCV.categories == null) {
+          $cc(select1CV, "wrong","add");
+          wrongMSGCV();
           return;
      }
-     if (formData.job == null) {
-          wrongMSG();
+     if (formDataCV.job == null) {
+          $cc(select2CV, "wrong","add");
+          wrongMSGCV();
 
           return;
      }
-     if (textarea.value == "") {
-          wrongMSG();
+     if (textareaCV.value == "") {
+          $cc(textareaCV,"wrong","add");
+          wrongMSGCV();
           return;
      }
-     if (salaryMax.value == "" || salaryMin.value == "") {
-          wrongMSG();
-          if(salaryMax <= salaryMin) return;
+     if (salaryCV.value == "") {
+          
+          $cc(salaryCV, "wrong","add");
+          wrongMSGCV();
+
           return;
      }
-     if (phone.value.length !== 13) {
-          $cc(phone, "wrong","add");
-          wrongMSG();
+     if (phoneCV.value.length !== 13) {
+          wrongMSGCV();
 
           return;
      }
      const now = new Date().toISOString(); 
      let currentUserName = JSON.parse(localStorage.getItem("user")).name;
-     let setLoacal = new jobAd(formData.categories, formData.job, textarea.value, salaryMin.value, salaryMax.value,now,currentUserName,);
-     console.log(setLoacal);
+     let setLoacal = new cv(formDataCV.categories, formDataCV.job, textareaCV.value, salaryCV.value ,now,currentUserName,);
+     console.log(setLoacal)
      let users = JSON.parse(localStorage.getItem("UsersData"));
      let currentuserName = JSON.parse(localStorage.getItem("user")).name;
      users.forEach(user => {
           if(user.name == currentuserName){
-               user.JobAd.push(setLoacal);
+               user.cv.push(setLoacal);
           }
      });
      localStorage.setItem("UsersData", JSON.stringify(users));

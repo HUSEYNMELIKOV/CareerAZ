@@ -120,7 +120,96 @@ section.banner-us .container {
 
      }
 }
+.banner-us #last-cv{
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(1, 310px);
+     .card-cv{
+          height: 100%;
+     }
+     .profile{
+          width: 100%;
+          background-color: var(--mqvym51c);
+          height: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0px 0px 40px 40px;
+          img{
+               border-radius: 50%;
+               width: 70px;
+               transition: 0.3s ease scale;
+          }
+     }
+     .content{
+          background-color: #fff;
+          height: 60%;
+          border-radius: 40px 40px 0px 0px ;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 2px;
+          .name{
+               text-align: center;
+               color: var(--mqvym51o);
+          }
+          .description{
+               position: relative;
+               display: flex;
+               justify-content: center;
+          }
+          .description p{
+               color: var(--mqvym51m);
+               line-height: calc(100% + 2px);
+               margin-bottom: 2px;
+               overflow: hidden;
+               height: 64px;
+               text-align: center;
+               width: 340px;
+               word-wrap: break-word;
+          }
+          .description::after{
+               position: absolute;
+               content: '';
+               background: #ffffff;
+               background: linear-gradient(0deg,rgba(255, 255, 255, 1) 18%, rgba(248, 250, 249, 0) 100%);
+               width: 100%;
+               height: 40px;
+               bottom: 0px;
 
+          }
+          .salary-date{
+               display: flex;
+               justify-content: space-between;
+               color: var(--mqvym51c);
+               
+               font-size: 16px;
+               span{
+                    font-weight: 700;
+               }
+          }
+     }
+     a{
+          background-color: #fff;
+          border-radius: 8px;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+     }
+     a:hover .profile img{
+          scale: 1.1;
+     }
+     
+     a::before{
+          position: absolute;
+          content: "";
+          background-color: var(--mqvym51c);
+          width: 50%;
+          height: 100%;
+          z-index: -1;
+
+     }
+}
 .cards .card-list {
      display: grid;
      grid-template-columns: repeat(4, 1fr);
@@ -172,7 +261,6 @@ section.banner-us .container {
           background: linear-gradient(0deg, rgba(255, 255, 255, 1) 10%, rgba(248, 250, 249, 0) 100%);
           height: 20px;
           width: 100%;
-
           bottom: 0px;
      }
 
@@ -191,7 +279,7 @@ section.banner-us .container {
           line-height: 1.5;
           color: #555;
           margin: 0;
-          width: 300px;
+          width: 200px;
           word-wrap: break-word;
           line-height: calc(100% + 2px);
      }
