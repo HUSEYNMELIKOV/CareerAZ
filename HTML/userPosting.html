@@ -209,10 +209,10 @@
           </header>
           <section class="cv-section">
                <div class="container">
-                    <div class="header">
-                         <h1>Bütün elanlar</h1>
+                    <div class="header" style="display: flex; justify-content: start;">
+                         <h1 class="w-100">Bütün elanlar</h1>
                          <div class="filter">
-                              <p>sırala</p>
+                              <p>Sırala</p>
                               <select id="filtrCV" class="filter">
                                    <option value="none">-seç-</option>
                                    <option value="1">Ucuz Tələblər</option>
@@ -220,18 +220,24 @@
                               </select>
                          </div>
                          <div class="addv-type filter">
-                              <p>Kateqoriya seç</p>
+                              <p>Elan növü</p>
                               <select id="type" >
                                    <option value="cv" selected>İş axtaranlar</option>
                                    <option value="JobAd">İş Elanları</option>
                               </select>
                          </div>
+                         <div class="categories-selectPG filter">
+                              <p>Kateqoriya</p>
+                              <select id="changeCategorie">
+                              </select>
+                         </div>
+                         
                     </div>
                     <div class="cards">
                         
                     </div>
                     <div class="next">
-                         <button id="wMore">wMore</button>
+                         <button id="wMore">daha gör</button>
                     </div>
 
 

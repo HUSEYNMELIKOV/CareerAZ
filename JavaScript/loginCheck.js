@@ -27,6 +27,7 @@ class User {
           this.pImg = "/assets/images/userDefault.png";
           this.JobAd = [];
           this.cv = [];
+          this.notices = [];
      }
 
 }

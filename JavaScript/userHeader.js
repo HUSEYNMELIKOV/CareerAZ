@@ -5,8 +5,45 @@ $on(document, "DOMContentLoaded", () => {
      $id("userPhotoImg").src = user.pImg;
      $id("email_edit").value = user.email;
      $id("edit-name").value = user.name;
-
+     
 });
+const popupOverlay = $id("popupOverlay");
+function openPopup() {
+  popupOverlay.style.display = "flex";
+}
+function closePopup() {
+  popupOverlay.style.display = "none";
+}
+$on(popupOverlay,"click", (e) => {
+  if (e.target === popupOverlay) {
+    closePopup();
+  }
+});
+
+const loadMsg = function (user) {
+     user.notices.forEach(notice => {
+          if(notice.userName !== user.name){
+               $id("messagesList").innerHTML += 
+           `
+               <div class="message-item">
+               <img src="${notice.userImg}" alt="Profil">
+               <div class="message-content">
+                 <h4 class="sender-name">${notice.userName}</h4>
+                 <textarea disabled> ${notice.msg} </textarea>
+                    </div>
+                    <button class="removeMSG" onclick="removeMSG(this)" >Sil</button>
+               </div>
+           `
+          }
+     })
+}
+const removeMSG = function (e) {
+     let removedElement = e.parentElement;
+     removedElement.remove();
+}
+loadMsg(JSON.parse(localStorage.getItem("user")));
+
+
 
 $on($id("save-edit"), "click", function () {
      let currentUserName = JSON.parse(localStorage.getItem("user"));

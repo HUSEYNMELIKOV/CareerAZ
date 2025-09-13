@@ -121,7 +121,7 @@ section .container {
 
 /* Kartın özü (a element) */
 .card {
-     display: block;
+     display: flex;
      /* a element block kimi */
      text-decoration: none;
      color: inherit;
@@ -131,8 +131,41 @@ section .container {
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
      border: 1px solid rgba(0, 0, 0, 0.08);
      transition: transform .2s ease, box-shadow .2s ease;
-     height: 260px;
      width: 100%;
+}
+.card-el{
+     .pp-d{
+          h2{
+               font-size: clamp(18px, 1vw, 22px);
+          }
+     }
+     .job-content .category {
+          display: inline-block;
+          font-size: 0.8rem;
+          padding: 4px 10px;
+          border-radius: 6px;
+          background: rgba(34, 197, 94, 0.08); /* açıq yaşıl fon */
+          color: #22c55e; /* açıq yaşıl mətn */
+          border: 1px solid rgba(34, 197, 94, 0.2);
+          text-decoration: none;
+          transition: background .2s ease;
+     }
+     .job-content .category:hover {
+          background: rgba(14, 233, 105, 0.15);
+     }
+     .salary-date {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.85rem;
+          color: #22c55e;
+          font-weight: 500;
+          flex-wrap: wrap;
+          gap: 4px;
+          span{
+               color: #22c55e !important;
+          }
+     }
 }
 
 .card:hover {
@@ -149,7 +182,8 @@ section .container {
      flex-direction: column;
      justify-content: space-between;
      height: 100%;
-     gap: 1rem;
+     width: 100%;
+     gap: 8px;
 }
 
 /* pp-d: profil şəkli və ad */
@@ -165,7 +199,7 @@ section .container {
      object-fit: cover;
      border-radius: 50%;
      flex-shrink: 0;
-     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .pp-d h2 {
@@ -243,5 +277,16 @@ section .container {
      .job-content .category {
           font-size: 0.75rem;
           padding: 3px 8px;
+     }
+}
+.container .next {
+     padding: 16px;
+     button{
+          color: var(--mqvym51m);
+          background-color: #fff;
+          border: none;
+          cursor: pointer;
+          text-decoration: underline;
+          font-size: 16px;
      }
 }

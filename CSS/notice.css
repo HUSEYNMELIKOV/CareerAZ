@@ -1,0 +1,127 @@
+/* Overlay */
+.popup-overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0,0,0,0.6);
+     display: none; /* gizli */
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+   }
+   
+   /* Popup kart */
+   .popup-card {
+     background: #fff;
+     width: 95%;
+     max-width: 600px;
+     max-height: 80vh;
+     border-radius: 16px;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+     display: flex;
+     flex-direction: column;
+     padding: 20px;
+     animation: fadeInUp 0.3s ease;
+     overflow-y: auto;
+   }
+   
+   /* Başlıq */
+   .popup-title {
+     font-size: 1.3rem;
+     font-weight: 600;
+     margin-bottom: 15px;
+   }
+   
+   /* Mesaj listi */
+   .messages-list {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+   }
+   
+   /* Mesaj item */
+   .message-item {
+     display: flex;
+     align-items: flex-start;
+     gap: 10px;
+     padding: 10px;
+     border-radius: 8px;
+     background: #f9f9f9;
+     border: 1px solid #ddd;
+   }
+   .removeMSG{
+     border: none;
+     padding: 4px 12px;
+     cursor: pointer;
+     color: red;
+     background-color: transparent;
+     font-size: 16px;
+     font-weight: 600;
+   }
+   .removeMSG:hover{
+     text-decoration: underline;
+   }
+   .message-item img {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     flex-shrink: 0;
+   }
+   
+   .message-content {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+   }
+   
+   .sender-name {
+     margin: 0 0 5px;
+     font-size: 14px;
+     font-weight: bold;
+     color: #222;
+   }
+   
+   .message-content textarea {
+     width: 100%;
+     resize: none;
+     border: none;
+     border-radius: 6px;
+     background: #fff;
+     padding: 8px;
+     font-size: 14px;
+     color: #444;
+     line-height: 1.4;
+   }
+   
+   /* Footer */
+   .popup-footer {
+     text-align: right;
+     margin-top: 15px;
+   }
+   
+   .close-btn {
+     background: #3498db;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 0.95rem;
+     transition: background 0.2s;
+   }
+   
+   .close-btn:hover {
+     background: #2980b9;
+   }
+   
+   /* Animasiya */
+   @keyframes fadeInUp {
+     from {
+       opacity: 0;
+       transform: translateY(40px);
+     }
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+   
