@@ -5,26 +5,26 @@ $on(document, "DOMContentLoaded", () => {
      $id("userPhotoImg").src = user.pImg;
      $id("email_edit").value = user.email;
      $id("edit-name").value = user.name;
-     
+
 });
 const popupOverlay = $id("popupOverlay");
 function openPopup() {
-  popupOverlay.style.display = "flex";
+     popupOverlay.style.display = "flex";
 }
 function closePopup() {
-  popupOverlay.style.display = "none";
+     popupOverlay.style.display = "none";
 }
-$on(popupOverlay,"click", (e) => {
-  if (e.target === popupOverlay) {
-    closePopup();
-  }
+$on(popupOverlay, "click", (e) => {
+     if (e.target === popupOverlay) {
+          closePopup();
+     }
 });
 
 const loadMsg = function (user) {
      user.notices.forEach(notice => {
-          if(notice.userName !== user.name){
-               $id("messagesList").innerHTML += 
-           `
+          if (notice.userName !== user.name) {
+               $id("messagesList").innerHTML +=
+                    `
                <div class="message-item">
                <img src="${notice.userImg}" alt="Profil">
                <div class="message-content">
@@ -39,38 +39,74 @@ const loadMsg = function (user) {
 }
 const removeMSG = function (e) {
      let removedElement = e.parentElement;
+     let userName = removedElement.querySelector(".sender-name").textContent;
+     let users = JSON.parse(localStorage.getItem("UsersData"));
+
+     users.forEach(user => {
+          user.notices.forEach((notice, index) => {
+               if (notice.userName == userName) {
+                    user.notices.splice(index, 1);
+               }
+          })
+          localStorage.setItem("user", JSON.stringify(user));
+     });
      removedElement.remove();
+     localStorage.setItem("UsersData", JSON.stringify(users));
+
 }
 loadMsg(JSON.parse(localStorage.getItem("user")));
-
-
 
 $on($id("save-edit"), "click", function () {
      let currentUserName = JSON.parse(localStorage.getItem("user"));
      let users = JSON.parse(localStorage.getItem("UsersData"));
-     if ($id("edit-name").value.length < 5 ){
+     let beforeName = currentUserName.name;
+     let newName = null;
+     if ($id("edit-name").value.length < 5) {
           $id("wrongMsgUser").innerText = "Minimum simvol sayı 5 olmalıdır.";
           return;
-     } 
+     }
      let checkUserName = false;
      users.forEach(user => {
           if (user.name == $id("edit-name").value) {
                $id("wrongMsgUser").innerText = "Bu istifadəçi adı artıq təyin olunub.";
                checkUserName = true;
-          } 
+          }
      })
-     if(!checkUserName){
+     if (!checkUserName) {
           users.forEach(user => {
-               if(user.name == currentUserName.name ) {
+
+               if (user.name == currentUserName.name) {
                     user.name = $id("edit-name").value;
-                    (localStorage.setItem("user",JSON.stringify(user)));
+                    newName = $id("edit-name").value;
+                    localStorage.setItem("user", JSON.stringify(user));
+
+               }
+               user.notices.forEach(obj => {
+                    if (obj.userName == beforeName) {
+                         obj.userName = $id("edit-name").value;
+                         localStorage.setItem("user", JSON.stringify(user));
+
+                    }
+               });
+               if (user.name == newName) {
+                    user.JobAd.forEach(obj => {
+                         obj.userName = user.name;
+                         localStorage.setItem("user", JSON.stringify(user));
+
+                    })
+               }
+               if (user.name == newName) {
+                    user.cv.forEach(obj => {
+                         obj.userName = user.name;
+                         localStorage.setItem("user", JSON.stringify(user));
+
+                    })
                }
           });
           localStorage.setItem("UsersData", JSON.stringify(users));
-          
-
+          location.reload();
      }
-     
+
 })
 
 $on($("#explore"), "click", function (e) {
@@ -140,12 +176,18 @@ $on(fileEl, "change", () => {
           let users = JSON.parse(localStorage.getItem("UsersData"));
           let currentUser = JSON.parse(localStorage.getItem("user"));
           users.forEach(user => {
+               user.notices.forEach(notice => {
+                    if (notice.userName == currentUser.name) {
+                         notice.userImg = url;
+                    }
+               })
                if (user.name == currentUser.name) {
                     user.pImg = url;
+
                     localStorage.setItem("user", JSON.stringify(user));
                     localStorage.setItem("UsersData", JSON.stringify(users));
+
                     location.reload();
-                    console.log(localStorage)
                }
           })
      })

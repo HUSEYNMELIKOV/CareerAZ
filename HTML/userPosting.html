@@ -9,13 +9,16 @@
 
      <link rel="stylesheet" href="/CSS/header.css">
      <link rel="stylesheet" href="/CSS/userHeader.css">
+     <link rel="stylesheet" href="/CSS/notice.css">
      <link rel="stylesheet" href="/CSS/userCV.css">
      <link rel="stylesheet" href="/CSS/root.css">
      <link rel="stylesheet" href="/CSS/editUser.css">
      <link rel="stylesheet" href="/CSS/responsive.css">
      <link rel="stylesheet" href="/CSS/global.css">
      <link rel="stylesheet" href="/CSS/footer.css">
-     <title>CareerAz / Profile</title>
+     
+
+     <title>CareerAz / Elanlar</title>
 </head>
 
 <body>
@@ -120,6 +123,19 @@
                </div>
           </div>
 
+          <div class="popup-overlay" id="popupOverlay">
+               <div class="popup-card">
+                    <h2 class="popup-title">Gələn Mesajlar</h2>
+                    <div class="messages-list" id="messagesList">
+
+                         
+                    </div>
+                    <div class="popup-footer">
+                         <button class="close-btn" onclick="closePopup()" >Geri</button>
+                    </div>
+               </div>
+          </div>
+
           <header class="flex w-100 column-flex">
                <div class="top-container flex w-100">
                     <div class="burger">
@@ -157,7 +173,7 @@
                                         </a>
                                    </li>
                                    <li class="link">
-                                        <a href="#">
+                                        <a href="userPosting.html">
                                              <h3>Elanlar</h3>
                                              <p>Veb səyfədə mövcud Elanlara baxın.</p>
                                         </a>
@@ -166,7 +182,7 @@
                          </li>
 
                          <li class="nav_li notice-li">
-                              <button class="notice hovGreen">
+                              <button class="notice hovGreen" onclick="openPopup()">
                                    <i class="fa-solid fa-bell"></i>
                               </button>
                          </li>
