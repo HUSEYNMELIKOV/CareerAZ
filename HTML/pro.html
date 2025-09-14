@@ -13,10 +13,46 @@
      <link rel="stylesheet" href="/CSS/loginPage.css">
      <link rel="stylesheet" href="/CSS/global.css">
      <link rel="stylesheet" href="/CSS/sectionBanner.css">
-     <link rel="stylesheet" href="/CSS/contentSection.css">
      <link rel="stylesheet" href="/CSS/footer.css">
-     <link rel="icon" href="/assets/svg/fiverr-circle.svg" type="image/x-icon">
+     <link rel="stylesheet" href="/CSS/detailsCategories.css">
+     <style>
+          
 
+          section.about-pro {
+               min-height: 100vh;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               text-align: center;
+               padding: 60px 20px;
+               background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+          }
+
+          .about-content {
+               max-width: 800px;
+          }
+
+          .about-content h1 {
+               font-size: 3rem;
+               margin-bottom: 20px;
+               background: linear-gradient(90deg, #00c6ff, #0072ff);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+          }
+
+          .about-content h2 {
+               font-size: 1.5rem;
+               font-weight: 400;
+               margin-bottom: 20px;
+               color: #d1d5db;
+          }
+
+          .about-content p {
+               font-size: 1.1rem;
+               line-height: 1.7;
+               color: #e8e8ed;
+          }
+     </style>
      <title>CareerAz</title>
 </head>
 
@@ -319,25 +355,7 @@
 
                     </div>
                     <nav class="flex">
-                         <li id="pro-dropdown" class="dr nav_li ">
-                              <a class="hovGray pro_btn" id="pro">Pro <i class="fa-solid fa-chevron-down"></i>
-                              </a>
-                              <ul class="dropdown-content flex pro column-flex">
-                                   <p class="window-p">Pro Haqqında</p>
-                                   <li class="link">
-                                        <a href="pro.html">
-                                             <div class="icon">
-                                                  <img src="/assets/icons/hd-icon-1.png" width="50px">
-                                             </div>
-                                             <div class="description">
-                                                  <h3>Profsianal Profil</h3>
-                                                  <p>Pro ilə Elanlarınızı və CV lərinizi mükəmməlləşdirin</p>
-                                             </div>
-                                        </a>
-                                   </li>
-
-                              </ul>
-                         </li>
+                         
                          <li id="explore-dropdown" class="dr nav_li">
                               <button class="hovGray explore_btn" id="explore">Kəşf et <i
                                         class="fa-solid fa-chevron-down"></i></button>
@@ -358,150 +376,27 @@
 
                               </ul>
                          </li>
+
                          <li class="nav_li "><button class="loginBtn hovGreen">Daxil ol</button></li>
                          <li class="nav_li "><button class="registerBtn hovGreen">Qoşul</button></li>
                     </nav>
                </div>
           </header>
-          <section class="banner">
-               <div class="container">
-                    <div class="bg-video">
-                         <video src="/assets/videos/index-screen-3.mp4" id="banner-video" loop autoplay></video>
-                    </div>
-                    <div class="contents">
-                         <div class="content-container">
-                              <div class="banner-header">
-                                   <h1>İstedad Axtarışları <br> və Karyera İmkanları Məkanı</h1>
-                              </div>
-                              <div class="banner-search">
-                                   <input type="search" id="search-banner" placeholder="Hər hansı bir xidmət axtarın">
-                                   <button class="search-btn __dark-btn-b1"><i class="fa-solid fa-search"></i></button>
-                              </div>
-                              <div class="categories">
-                                   <ul>
-
-                                   </ul>
-                              </div>
-                         </div>
-                         <div class="bottom-content">
-                              <ul class="trusted-by">
-                                   <span>Trusted by: </span>
-                                   <div class="list">
-
-                                   </div>
-                              </ul>
-                              <div class="start-stop-bgVid">
-                                   <button class="__dark-btn-b1"><i class="fa-solid fa-pause"></i></button>
-                              </div>
-                         </div>
-                    </div>
-
-               </div>
-          </section>
-          <section class="content-section">
-               <div class="container">
-                    
-                    <div class="container-2">
-                         <button class="control" id="prev">
-                              <img src="/assets/svg/chevron.svg" style="rotate: 180deg;">
-                         </button>
-                         <div class="popular-services">
-                              <h1>Populyar Xidmətlər</h1>
-                         </div>
-                         <div class="cards parent">
-
-                         </div>
-                         <button class="control" id="next">
-                              <img src="/assets/svg/chevron.svg" style="rotate: 0deg;">
-                         </button>
-                    </div>
-                    <div class="container-3">
-                         <div class="pro-content">
-                              <div class="description-pro">
-                                   <div class="header">
-                                        <h1><strong>Pro</strong>-da nə var?</h1>
-                                   </div>
-                                   <div class="desc-content">
-                                        <h2>Bizneslər üçün <span>Premium</span> sərbəst işçi həlli</h2>
-                                   </div>
-                                   <div class="pro-param">
-                                        <div class="text">
-                                             <img src="/assets/svg/pro-check.svg">
-                                             <h4>Xüsusi işə götürmə mütəxəssisləri</h4>
-                                             <p>Sizə uyğun istedadı tapmaq və layihənizin hər ehtiyacını görmək üçün bir
-                                                  hesab
-                                                  menecerinə etibar edin.</p>
-                                        </div>
-                                        <div class="text">
-                                             <img src="/assets/svg/pro-check.svg">
-                                             <h4>Məmnuniyyət zəmanəti</h4>
-                                             <p>Qeyri-qənaətbəxş çatdırılmalar üçün zəmanətli geri ödəmə ilə əminliklə
-                                                  sifariş
-                                                  edin.</p>
-                                        </div>
-                                        <div class="text">
-                                             <img src="/assets/svg/pro-check.svg">
-                                             <h4>Qabaqcıl idarəetmə alətləri</h4>
-                                             <p>Sərbəst işçiləri komandanıza və layihələrinizə problemsiz inteqrasiya
-                                                  edin.</p>
-                                        </div>
-                                        <div class="text">
-                                             <img src="/assets/svg/pro-check.svg">
-                                             <h4>Çevik ödəniş modelləri</h4>
-                                             <p>Uzunmüddətli əməkdaşlığı asanlaşdırmaq üçün layihəyə görə ödəyin və ya
-                                                  saatlıq
-                                                  tarifləri seçin.</p>
-                                        </div>
-                                   </div>
-                                   <div class="try">
-                                        <button class="__dark-btn-b1 registerBtn">İndi sına</button>
-                                   </div>
-                              </div>
-                              <div class="img-box">
-                                   <img src="/assets/images/careerAz-pro.png">
-                              </div>
-                         </div>
-                    </div>
-                    <div class="container-4">
-                         <div class="header">
-                              <h1>Sərbəst işçilərlə hər şeyi reallaşdırın</h1>
-                         </div>
-                         <div class="items">
-                              <div class="item">
-                                   <div class="img-box">
-                                        <img src="/assets/svg/categories.svg">
-                                   </div>
-                                   g <p>700 kateqoriya üzrə ən yaxşı istedad fonduna çıxış əldə edin</p>
-                              </div>
-                              <div class="item">
-                                   <div class="img-box">
-                                        <img src="/assets/svg/matching.svg">
-                                   </div>
-                                   <p>Sadə, istifadəsi asan uyğunlaşdırma təcrübəsindən həzz alın</p>
-                              </div>
-                              <div class="item">
-                                   <div class="img-box">
-                                        <img src="/assets/svg/quickly.svg">
-                                   </div>
-                                   <p>Keyfiyyətli işləri tez və büdcə daxilində görün</p>
-                              </div>
-                              <div class="item">
-                                   <div class="img-box">
-                                        <img src="/assets/svg/happy.svg">
-                                   </div>
-                                   <p>Yalnız məmnun qaldığınız zaman ödəyin</p>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="container-5">
-                         <div class="header">
-                              <h1>Müştəri Məmnuniyyəti</h1>
-                         </div>
-                    </div>
-                    <div class="container-6">
-                         <h1>Sərbəst işçi xidmətləri <span>barmaqlarınızın ucunda</span></h1>
-                         <button class="registerBtn">CareerAz-a Qoşulun</button>
-                    </div>
+          <section class="about-pro">
+               <div class="about-content">
+                    <h1>Pro Layihəsi</h1>
+                    <h2>Gələcəyin texnologiyasını bu gün qururuq</h2>
+                    <p>
+                         Bu layihə istifadəçilərə yalnız iş tapmaq imkanı deyil, həm də
+                         müxtəlif sahələr üzrə yeni imkanları araşdırmaq üçün nəzərdə tutulub. <br><br>
+                         Burada həm peşəkarlar, həm də yeni başlayanlar üçün fərqli seçimlər
+                         təqdim olunur. İstifadəçilər öz bacarıqlarına uyğun elanlara baxa,
+                         profil yarada və əmək bazarındakı trendləri izləyə bilərlər. <br><br>
+                         Pro platforması sadəcə iş elanları deyil, həm də faydalı məqalələr,
+                         inkişaf resursları və şəbəkələşmə fürsətləri ilə zənginləşdirilib. <br><br>
+                         Məqsədimiz hər kəs üçün daha əlçatan, daha etibarlı və daha çevik
+                         bir mühit yaratmaqdır.
+                    </p>
                </div>
           </section>
           <footer>
@@ -536,14 +431,13 @@
                </div>
           </footer>
      </div>
-     <script>localStorage.setItem("detailCategories", null)</script>
-     <script src="/JavaScript/utils.js"></script>.
+
+     <script src="/JavaScript/utils.js"></script>
      <script src="/JavaScript/header.js"></script>
      <script src="/JavaScript/loginPageRequest.js"></script>
      <script src="/JavaScript/dataRequestHeader.js"></script>
      <script src="/JavaScript/loginCheck.js"></script>
-     <script src="/JavaScript/sectionBanner.js"></script>
-     <script src="/JavaScript/sectionContent.js"></script>
+     <script src="/JavaScript/goCategorie.js"></script>
      <script src="/JavaScript/finally.js"></script>
 </body>
 

@@ -51,7 +51,7 @@ for (let i = 0; i < 4; i++) {
           }
      })
      lastJobsInSection.innerHTML += `
-     <a href="#" data-id="${allAdv[i].id}">
+     <a href="#" data-id="${allAdv[i].id}" >
      <div class="card">
           <div class="poster">
                <h3>${allAdv[i].userName}</h3>
@@ -106,8 +106,21 @@ for (let i = 0; i < 3; i++) {
 
 }
 
+$on(lastJobsInSection, "click", function(e) {
+     const link = e.target.closest("a"); 
+     if (link && lastJobsInSection.contains(link)) {
+         localStorage.setItem("advID",link.dataset.id);
+         window.location.href = "adv.html";
+     }
+ });
+ $on(lastCVInSection, "click", function(e) {
+     const link = e.target.closest("a"); 
+     if (link && lastCVInSection.contains(link)) {
+         localStorage.setItem("advID",link.dataset.id);
+         window.location.href = "adv.html";
+     }
+ });
 
 
-/* edit profile btn */
 
 

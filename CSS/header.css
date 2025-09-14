@@ -212,7 +212,7 @@ header .top-container nav li.dr ul.dropdown-content.pro {
 
 /* explore dropdown div elementi ucun xususi style */
 header .top-container nav li.dr ul.dropdown-content.explore {
-     left: 0px;
+     right: 0px;
      width: 400px;
      padding: 8px;
      li.link {
@@ -404,7 +404,6 @@ header .top-container .burgerBtn {
 .sidebar .sidebar-menu .wrapper-collapse.open {
      max-height: 1000px;
 }
-
 .sidebar .sidebar-menu {
      overflow-y: auto;
 }

@@ -51,16 +51,14 @@
           padding: 32px 16px;
      }
      section.banner .contents {
-          padding: 8% 32px 32px !important;
+          padding: 32px 16px !important;
 
           div.content-container {
                width: 90%;
           }
      }
 
-     header .top-container nav li.dr ul.dropdown-content.explore {
-          left: -40px;
-     }
+    
      
 }
 
@@ -257,6 +255,9 @@
                p{
                     font-size: 14px;
                     opacity: 0.6;
+                    margin: 0;
+               }
+               .logo-box{
                     margin: 0;
                }
           }

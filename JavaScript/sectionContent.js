@@ -12,24 +12,14 @@ $on(document, "DOMContentLoaded", getCategoriesName);
 
 const handleData = (data) => {
      data[0].jobsCategories.categories.forEach(obj => {
-          $(".content-section .categories-link ul.links")
-               .innerHTML +=
-               `
-               <li>
-                    <a href="#">
-                         <div class="icon">
-                              <img src="${obj.icon}">
-                         </div>
-                         <span>${obj.name}</span>
-                    </a>
-               </li>
-          `;
+          
+               
           obj.jobs.forEach(jobObj => {
                if (jobObj.isContentSection) {
                     $(".content-section .container-2 .cards.parent")
                          .innerHTML +=
                          `
-                    <a href="#">
+                    <a href="detailCategories.html">
                          <div class="card popular-service">
                               <div class="job-name">
                                    <h2>${jobObj.name}</h2>
@@ -39,10 +29,28 @@ const handleData = (data) => {
                               </div>
                          </div>
                     </a>
-                    `
+                    `;
                }
-          })
+          });
+         
+
      })
+     let a = $(".content-section .container-2 .cards.parent a",true);
+     a.forEach(link => {
+          $on(link, "click", function () {
+               jobName = link.querySelector("h2").textContent;
+               currentID = null;
+               data[0].jobsCategories.categories.forEach((obj, index) => {
+                    for(let i = 0; i < obj.jobs.length; i++){
+                         if(obj.jobs[i].name == jobName){
+                              currentID = obj.id;
+                              break;
+                         }
+                    }
+               })
+               localStorage.setItem("detailCategories",currentID);
+          })
+     });
 };
 let serSladeControls = $("section.content-section .container-2 .control", true);
 let prev = serSladeControls[0];
@@ -51,7 +59,6 @@ let next = serSladeControls[1];
 $on(next, "click", function (e) { 
      let step = $(".content-section .container-2 .cards.parent").clientWidth;
      $(".content-section .container-2 .cards.parent").scrollBy({ left: step, behavior: "smooth" });
-     console.log(e);
 })
 $on(prev, "click", function (e) { 
      let step = $(".content-section .container-2 .cards.parent").clientWidth;

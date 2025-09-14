@@ -1,20 +1,21 @@
 [
      {
-          "type": "login",
-          "text": {
-               "h2": "Sign in to your account",
-               "p": "Don’t have an account?",
-               "span": "Join here",
-               "withButtonEmail": "Continue with email/username"
-          }
+       "type": "login",
+       "text": {
+         "h2": "Hesabınıza daxil olun",
+         "p": "Hesabınız yoxdur?",
+         "span": "Burada qoşulun",
+         "withButtonEmail": "Email/istifadəçi adı ilə davam et"
+       }
      },
      {
-          "type": "register",
-          "text": {
-               "h2": "Create a new account",
-               "p": "Already have an account?",
-               "span": "Sign in",
-               "withButtonEmail": "Continue with email"
-          }
+       "type": "register",
+       "text": {
+         "h2": "Yeni hesab yaradın",
+         "p": "Artıq hesabınız var?",
+         "span": "Daxil olun",
+         "withButtonEmail": "Email ilə davam et"
+       }
      }
-]
+   ]
+   

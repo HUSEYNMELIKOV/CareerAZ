@@ -16,14 +16,17 @@ footer .left-side{
      display: flex;
      justify-content: start;
      align-items: center;
+     flex-wrap: wrap;
      width: 100%;
      .logo-box{
           img{
                width: 135px;
           }
+          margin-right: 24px;
      }
      p{
-          margin-left: 24px;
+          padding: 6px 0px ;
+          color: var(--mqvym51m);
      }
      
 }
@@ -48,6 +51,7 @@ footer .right-side{
                justify-content: center;
                align-items: center;
                text-decoration: none;
+               color: var(--mqvym51m);
           }
           li a:hover{
                background-color: var(--mqvym51e);

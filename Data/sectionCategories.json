@@ -1,36 +1,33 @@
 {
-     "categories": [
-          {
-               "name": "Programing & Tech"
-          },
-          {
-               "name": "Video & Animation"
-          },
-          {
-               "name": "Graphics & Design"
-          },
-          {
-               "name": "Writing & Translations"
-          },
-          {
-               "name": "Music & Audio"
-          }
-     ],
-     "trustedBy": [
-          {
-               "svg": "/assets/svg/google.svg"
-          },
-          {
-               "svg": "/assets/svg/netflix.svg"
-          },
-          {
-               "svg": "/assets/svg/meta.svg"
-          },
-          {
-               "svg": "/assets/svg/pg.svg"
-          },
-          {
-               "svg": "/assets/svg/paypal.svg"
-          }
-     ]
+  "categories": [
+    {
+      "id": 1,
+      "name": "Proqramlaşdırma və Texnologiya"
+    },
+    {
+      "id": 2,
+      "name": "Video və Animasiya"
+    },
+    {
+      "id": 3,
+      "name": "Qrafika və Dizayn"
+    }
+  ],
+  "trustedBy": [
+    {
+      "svg": "/assets/svg/google.svg"
+    },
+    {
+      "svg": "/assets/svg/netflix.svg"
+    },
+    {
+      "svg": "/assets/svg/meta.svg"
+    },
+    {
+      "svg": "/assets/svg/pg.svg"
+    },
+    {
+      "svg": "/assets/svg/paypal.svg"
+    }
+  ]
 }

@@ -1,119 +1,123 @@
 [
-     {
-       "jobsCategories": {
-         "categories": [
-           {
-             "id": 1,
-             "name": "Proqramlama və Texnologiya",
-             "icon": "/assets/svg/programming-tech-thin.svg",
-             "jobs": [
-               {
-                 "name": "Veb Developer",
-                 "sectionImgURL": "/assets/images/website-development.jpg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "Mobil Tətbiq Developer",
-                 "sectionImgURL": "/assets/images/mobile-app-development.jpg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "Data Analitik",
-                 "sectionImgURL": "/assets/images/data-analytics.jpg",
-                 "isContentSection": true
-               }
-             ]
-           },
-           {
-             "id": 2,
-             "name": "Video və Animasiya",
-             "icon": "/assets/svg/video-animation-thin.svg",
-             "jobs": [
-               {
-                 "name": "Video Montajçı",
-                 "sectionImgURL": "/assets/images/video-editing.jpg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "2D/3D Animator",
-                 "sectionImgURL": "/assets/images/animation.jpg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "Hərəkətli Qrafika Dizayneri",
-                 "sectionImgURL": "/assets/images/motion-graphics.jpg",
-                 "isContentSection": true
-               }
-             ]
-           },
-           {
-             "id": 3,
-             "name": "Qrafika və Dizayn",
-             "icon": "/assets/svg/graphics-design-thin.svg",
-             "jobs": [
-               {
-                 "name": "UI/UX Dizayner",
-                 "sectionImgURL": "/assets/images/ui-ux.jpeg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "Logo Dizayner",
-                 "sectionImgURL": "/assets/images/logo-design.jpeg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "Illustrator",
-                 "sectionImgURL": "/assets/images/illustrator.jpg",
-                 "isContentSection": false
-               }
-             ]
-           },
-           {
-             "id": 4,
-             "name": "Yazı və Tərcümə",
-             "icon": "/assets/svg/writing-translation-thin.svg",
-             "jobs": [
-               {
-                 "name": "Məzmun Yazarı",
-                 "sectionImgURL": "/assets/images/content-writer.jpg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "Copywriter",
-                 "sectionImgURL": "/assets/images/copywriting.jpg",
-                 "isContentSection": false
-               },
-               {
-                 "name": "Tərcüməçi",
-                 "sectionImgURL": "/assets/images/translation.jpg",
-                 "isContentSection": false
-               }
-             ]
-           },
-           {
-             "id": 5,
-             "name": "Musiqi və Audio",
-             "icon": "/assets/svg/music-audio-thin.svg",
-             "jobs": [
-               {
-                 "name": "Musiqi Prodüseri",
-                 "sectionImgURL": "/assets/images/music-producer.jpg",
-                 "isContentSection": true
-               },
-               {
-                 "name": "Səs Dizayneri",
-                 "sectionImgURL": "/assets/images/sound-design.jpg",
-                 "isContentSection": false
-               },
-               {
-                 "name": "Səs Aktyoru",
-                 "sectionImgURL": "/assets/images/voice-over.jpg",
-                 "isContentSection": false
-               }
-             ]
-           }
-         ]
-       }
-     }
-   ]
-   
+  {
+    "jobsCategories": {
+      "categories": [
+        {
+          "id": 1,
+          "name": "Proqramlaşdırma və Texnologiya",
+          "detailsBg": "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+          "icon": "/assets/svg/programming-tech-thin.svg",
+          "jobs": [
+            {
+              "name": "Veb Developer",
+              "sectionImgURL": "/assets/images/website-development.jpg",
+              "isContentSection": true
+            },
+            {
+              "name": "Mobil Tətbiq Developer",
+              "sectionImgURL": "/assets/images/mobile-app-development.jpg",
+              "isContentSection": true
+            },
+            {
+              "name": "Data Analitik",
+              "sectionImgURL": "/assets/images/data-analytics.jpg",
+              "isContentSection": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Video və Animasiya",
+          "detailsBg": "linear-gradient(135deg, #141e30, #243b55)",
+          "icon": "/assets/svg/video-animation-thin.svg",
+          "jobs": [
+            {
+              "name": "Video Montajçı",
+              "sectionImgURL": "/assets/images/video-editing.jpg",
+              "isContentSection": true
+            },
+            {
+              "name": "2D/3D Animator",
+              "sectionImgURL": "/assets/images/animation.jpg",
+              "isContentSection": true
+            },
+            {
+              "name": "Hərəkətli Qrafika Dizayneri",
+              "sectionImgURL": "/assets/images/motion-graphics.jpg",
+              "isContentSection": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Qrafika və Dizayn",
+          "detailsBg": "linear-gradient(135deg, #232526, #414345)",
+          "icon": "/assets/svg/graphics-design-thin.svg",
+          "jobs": [
+            {
+              "name": "UI/UX Dizayner",
+              "sectionImgURL": "/assets/images/ui-ux.jpeg",
+              "isContentSection": true
+            },
+            {
+              "name": "Logo Dizayner",
+              "sectionImgURL": "/assets/images/logo-design.jpeg",
+              "isContentSection": true
+            },
+            {
+              "name": "Illustrator",
+              "sectionImgURL": "/assets/images/illustration.jpg",
+              "isContentSection": false
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Yazı və Tərcümə",
+          "detailsBg": "linear-gradient(135deg, #1f1c2c, #928dab)",
+          "icon": "/assets/svg/writing-translation-thin.svg",
+          "jobs": [
+            {
+              "name": "Məzmun Yazarı",
+              "sectionImgURL": "/assets/images/content-writer.jpg",
+              "isContentSection": true
+            },
+            {
+              "name": "Copywriter",
+              "sectionImgURL": "/assets/images/copywriting.jpg",
+              "isContentSection": false
+            },
+            {
+              "name": "Tərcüməçi",
+              "sectionImgURL": "/assets/images/translator.jpg",
+              "isContentSection": false
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Musiqi və Audio",
+          "detailsBg": "linear-gradient(135deg, #000428, #004e92)",
+          "icon": "/assets/svg/music-audio-thin.svg",
+          "jobs": [
+            {
+              "name": "Musiqi Prodüseri",
+              "sectionImgURL": "/assets/images/music-producer.jpg",
+              "isContentSection": true
+            },
+            {
+              "name": "Səs Dizayneri",
+              "sectionImgURL": "/assets/images/sound-design.jpg",
+              "isContentSection": false
+            },
+            {
+              "name": "Səs Aktyoru",
+              "sectionImgURL": "/assets/images/voice-over.jpg",
+              "isContentSection": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

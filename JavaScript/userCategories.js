@@ -17,23 +17,12 @@ const loadSidebarCategories = (data) => {
      data[0].jobsCategories.categories.forEach((categorie) => {
           collapseWrapperUl.innerHTML +=
                `
-                    <a href="detailCategories.html" data-id="${categorie.id}" class="categorie listelement">
+                    <a href="userPosting.html" data-id="${categorie.id}" class="categorie listelement">
                          <span>${categorie.name}</span>
                          <i class="fa-solid fa-arrow-right"></i>
                     </a>
                `;
      })
-     let allLinksWrapper = $(".wrapper-collapse ul a",true);
-     
-     allLinksWrapper.forEach(a => {
-          $on(a,"click", function () {
-               localStorage.setItem("detailCategories",a.dataset.id);
-               
-          })
-     })
-     
-
-     
 }
 
 

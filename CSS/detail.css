@@ -17,9 +17,13 @@
      color: #333;
      resize: none; 
  }
+ .adv-detail .container #posterImg{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+ }
  
- 
- /* Poster adı */
  .poster-name {
      font-size: 1.4rem;
      font-weight: 600;
@@ -36,7 +40,6 @@
           box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
      }
   }
- /* İş məlumatları */
  .job-info {
      display: flex;
      flex-direction: column;
@@ -70,7 +73,6 @@
      color: #0e5a0e;
  }
  
- /* Mesaj göndərmə */
  .message-box {
      display: flex;
      gap: 10px;
@@ -97,7 +99,6 @@
      background-color: #0284c7;
  }
  
- /* Responsiv */
  @media(max-width: 600px){
      .adv-detail .container {
          margin: 20px 15px;
